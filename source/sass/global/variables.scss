@@ -7,3 +7,17 @@ $secondary: #3C55B3;
 $secondary--dark: #17171B;
 
 $accent: #ffc55a;
+
+$background-light: $primary--light;
+$background-dark: $primary--darken;
+$text-light: $primary--lightest;
+$text-dark: $primary--dark;
+
+/*ширина экрана*/
+$mobile-width-only: 767px;
+$tablet-width: 768px;
+$desktop-width: 1440px;
+
+/*ретина*/
+$retina-dpi: 144dpi;
+$retina-dppx: 1.5dppx;
