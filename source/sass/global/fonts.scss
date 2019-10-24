@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  src: url("../fonts/ubuntu-regular.woff2") format("woff2");
+  src: url("../fonts/ubuntu-regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/ubuntu-bold.woff2") format("woff2");
+  src: url("../fonts/ubuntu-bold.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 500;
+  font-display: swap;
+  src: url("../fonts/ubuntu-medium.woff2") format("woff2");
+  src: url("../fonts/ubuntu-medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  font-weight: 300;
+  font-display: swap;
+  src: url("../fonts/ubuntu-light.woff2") format("woff2");
+  src: url("../fonts/ubuntu-light.woff") format("woff");
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Ubuntu", "Arial", sans-serif;
+  font-style: normal;
+}
