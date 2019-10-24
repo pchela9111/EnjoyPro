@@ -1,15 +1,29 @@
 .nav-main {
   width: 100%;
 }
+
+.nav-main__container {
+  width: 87.5%;
+  width: 280px;
+  outline: 2px solid tomato;
+  margin-right: auto;
+  margin-left: auto;
+}
 .nav-main__bar {
   width: 100%;
   outline: 2px solid chartreuse;
   display: flex;
-  justify-content: space-between;
   align-items: center;
 }
+.nav-main__logo {
+  margin-right: 41px;
+}
 
-  .nav-main--closed .nav-main__cart {
+.nav-main--closed .nav-main__combobox {
+  width: 100%;
+}
+
+.nav-main--closed .nav-main__cart {
   position: relative;
   box-sizing: border-box;
   width: 45px;
@@ -17,6 +31,7 @@
   border-radius: 50px;
   background-color: $primary--lightest;
   border: none;
+  margin-right: auto;
 
   &::before {
     position: absolute;
