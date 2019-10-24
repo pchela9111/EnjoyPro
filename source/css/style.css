@@ -410,15 +410,26 @@ img {
 .nav-main {
   width: 100%; }
 
+.nav-main__container {
+  width: 87.5%;
+  width: 280px;
+  outline: 2px solid tomato;
+  margin-right: auto;
+  margin-left: auto; }
+
 .nav-main__bar {
   width: 100%;
   outline: 2px solid chartreuse;
   display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
-          justify-content: space-between;
   -webkit-box-align: center;
           align-items: center; }
+
+.nav-main__logo {
+  margin-right: 41px; }
+
+.nav-main--closed .nav-main__combobox {
+  width: 100%; }
 
 .nav-main--closed .nav-main__cart {
   position: relative;
@@ -427,7 +438,8 @@ img {
   height: 45px;
   border-radius: 50px;
   background-color: #ffffff;
-  border: none; }
+  border: none;
+  margin-right: auto; }
   .nav-main--closed .nav-main__cart::before {
     position: absolute;
     content: "";
