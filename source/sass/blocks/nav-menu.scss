@@ -53,3 +53,27 @@
     transform: translate3d(0, 0, 0);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .nav-menu {
+    /*width: 78.19767441860465‬%;*/
+    width: 538px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    outline: 2px solid red;
+    background-color: darkseagreen;
+  }
+
+  .nav-menu__item {
+    margin-bottom: 0;
+  }
+
+  .nav-menu__link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $text-light;
+  }
+
+}
