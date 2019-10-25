@@ -1,7 +1,6 @@
 .header-main {
   position: relative;
   width: 100%;
-  padding-top: 20px;
   background-image: url("../img/main-bg-mobile@1x.jpg");
   background-position: center top;
   background-size: auto auto;
@@ -14,7 +13,7 @@
     background-size:  320px 568px;
   }
 
-  &:before {
+  &::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -24,12 +23,4 @@
     background-color: $background-dark;
     z-index: -1;
   }
-}
-
-.header-main__container {
-  width: 87.5%;
-  width: 280px;
-  outline: 2px solid tomato;
-  margin-right: auto;
-  margin-left: auto;
 }
