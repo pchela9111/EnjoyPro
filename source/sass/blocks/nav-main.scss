@@ -15,6 +15,7 @@
   display: flex;
   align-items: center;
 }
+
 .nav-main__logo {
   margin-right: 41px;
 }
@@ -23,13 +24,13 @@
   width: 100%;
 }
 
-.nav-main--closed .nav-main__cart {
+.nav-main--closed .nav-main__cart,
+.nav-main--opened .nav-main__cart {
   position: relative;
   box-sizing: border-box;
   width: 45px;
   height: 45px;
   border-radius: 50px;
-  background-color: $primary--lightest;
   border: none;
   margin-right: auto;
 
@@ -48,6 +49,13 @@
   }
 }
 
+.nav-main--closed .nav-main__cart {
+  background-color: $primary--lightest;
+}
+.nav-main--opened .nav-main__cart {
+  background-color: $accent;
+}
+
 .nav-main--closed .nav-main__toggle {
   position: relative;
   box-sizing: border-box;
@@ -61,12 +69,68 @@
     content: "";
     width: 32px;
     height: 32px;
-    top: calc(50% - 32px / 2);
-    left: calc(50% - 32px / 2);
+    top: 0;
+    left: 0;
     background-image: url("data:image/svg+xml,%3Csvg height='32' width='32' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath d='M4 10h24a2 2 0 000-4H4a2 2 0 000 4zm24 4H4a2 2 0 000 4h24a2 2 0 000-4zm0 8H4a2 2 0 000 4h24a2 2 0 000-4z' fill='%23ffffff'/%3E%3C/svg%3E");
     background-position: 0 0;
     background-size: 32px 32px;
     background-repeat: no-repeat;
     background-color: transparent;
   }
+}
+
+.nav-main--opened .nav-main__toggle {
+  position: relative;
+  box-sizing: border-box;
+  width: 22px;
+  height: 22px;
+  border: none;
+  background-color: transparent;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 22px;
+    height: 22px;
+    top: 0;
+    left: 0;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z' fill='%2337334B'/%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: 22px 22px;
+    background-repeat: no-repeat;
+    background-color: transparent;
+  }
+}
+
+@media (max-width: $mobile-width-only) {
+  .nav-main--closed .nav-menu {
+    display: none;
+  }
+
+  .nav-main--opened .nav-main__combobox {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 20px;
+    background-color: $background-light;
+
+    border-bottom-right-radius: 50px;
+    border-bottom-left-radius: 50px;
+    outline: 10px solid lime;
+  }
+
+  .nav-main--opened .nav-main__bar {
+    margin-bottom: 30px;
+  }
+
+  .nav-main--opened  .nav-main__list-menu {
+    margin-bottom: 50px;
+    outline: 2px solid dodgerblue;
+  }
+
+  .nav-main--opened .nav-main__list-user {
+    text-align: center;
+  }
+
 }

@@ -7,12 +7,32 @@
   <link href="css/style.css" rel="stylesheet">
   <script src="js/picturefill.min.js"></script>
   <title>EnjoyPro. Продажа холодильных комплектующих</title>
+  <link href="../pixel-glass/styles.css" rel="stylesheet">
+  <script src="../pixel-glass/script.js"></script>
+  <style>
+    HTML {
+       background: url('iPhone SE - 1.png') 50% 0 no-repeat;
+     }
+     @media (min-width: 768px) {
+       HTML {
+         background-image: url('pognali-index-tablet.jpg');
+       }
+     }
+     @media (min-width: 1440px) {
+       HTML {
+         background-image: url('pognali-index-desktop.jpg');
+       }
+     }
+     BODY {
+       opacity: .5;
+     }
+  </style>
 </head>
 <body>
   <svg style="display:none">
   </svg>
   <header class="header-main">
-    <nav class="nav-main  nav-main--closed">
+    <nav class="nav-main  nav-main--opened">
       <div class="nav-main__combobox">
         <div class="nav-main__container">
         <div class="nav-main__bar">
@@ -21,14 +41,14 @@
           <button class="nav-main__toggle" type="button"></button>
         </div>
         <ul class="nav-main__list-menu  nav-menu">
-          <li class="nav-menu__item"><a class="nav-menu__link" aria-current="page"><span class="visually-hidden">Текущий пункт</span>О компании</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">Каталог</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">Доставка и оплата</a></li>
-          <li class="nav-menu__item"><a class="nav-menu__link" href="#">Контакты</a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" aria-current="page"><span class="visually-hidden">Текущий пункт</span><span class="nav-menu__decor" data-hover="О компании">О компании</span></a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="#"><span class="nav-menu__decor" data-hover="Каталог">Каталог</span></a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="#"><span class="nav-menu__decor" data-hover="Доставка и оплата">Доставка и оплата</span></a></li>
+          <li class="nav-menu__item"><a class="nav-menu__link" href="#"><span class="nav-menu__decor" data-hover="Контакты">Контакты</span></a></li>
         </ul>
         <ul class="nav-main__list-user  nav-user">
-          <li class="nav-user__item"><a class="nav-user__link" href="tel:+7-977-754-36-51" aria-label="Позвоните нам">+7 977-754-36-51</a></li>
-          <li class="nav-user__item"><a class="nav-user__link" href="mailto:info@enjoyprocorp.ru" aria-label="Напишите нам"><span class="nav-user__hidden">info@enjoyprocorp.ru</span></a></li>
+          <li class="nav-user__item"><a class="nav-user__link" href="tel:+7-977-754-36-51" aria-label="Позвоните нам"><span class="nav-user__box  nav-user__box--tel"></span>+7 977-754-36-51</a></li>
+          <li class="nav-user__item"><a class="nav-user__link" href="mailto:info@enjoyprocorp.ru" aria-label="Напишите нам" title="Напишите нам: info@enjoyprocorp.ru"><span class="nav-user__box  nav-user__box--email"></span><span class="nav-user__hidden">info@enjoyprocorp.ru</span></a></li>
         </ul>
         </div>
       </div>
