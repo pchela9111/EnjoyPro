@@ -110,3 +110,15 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .nav-user {
+    width: 266px;
+    margin-right: 6.5%;
+  }
+
+  .nav-user__box {
+  
+    top: -35px;
+  }
+}

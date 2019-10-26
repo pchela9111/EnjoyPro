@@ -77,3 +77,14 @@
   }
 
 }
+
+@media (min-width: $desktop-width) {
+  .nav-menu {
+    /*width: 78.19767441860465‬%;*/
+    width: 605px;
+    display: flex;
+    margin-left: 15%;
+    outline: 2px solid red;
+    background-color: darkseagreen;
+  }
+}
