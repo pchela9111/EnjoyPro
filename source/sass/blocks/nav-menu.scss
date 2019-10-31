@@ -1,0 +1,36 @@
+.nav-menu {
+  width: 100%;
+}
+
+.nav-menu__item {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.nav-menu__link {
+  position: relative;
+  display: block;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  font-weight: 400;
+  text-transform: uppercase;
+  color: $primary--light;
+  color: red;
+  transition: 180ms;
+
+  &:not([href]) {
+    color: $primary;
+  }
+  &:not([href]):active {
+    color: $primary;
+  }
+
+  &:hover,
+  &:focus {
+    color: $primary;
+  }
+
+  &:active {
+    color: rgba($primary, 0.3);
+  }
+}
