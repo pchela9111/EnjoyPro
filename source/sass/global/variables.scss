@@ -1,17 +1,14 @@
-$primary--light: #f9feff; /*фон*/
-$primary--lightest: #ffffff;  /*фон и текст*/
-$primary--dark: #2D1982;
-$primary--darken: #37334B;  /*фон*/
+$primary--light: #ecf0f3;
+$primary--lightest: #ffffff;
+$primary: #51e7e9;
+$primary-dark: #544951;
 
-$secondary: #3C55B3;
-$secondary--dark: #17171B;
+$secondary: #272727;
 
-$accent: #ffc55a;
-
-$background-light: $primary--light;
-$background-dark: $primary--darken;
-$text-light: $primary--lightest;
-$text-dark: $primary--dark;
+$background--light: $primary--lightest;
+$background: $primary;
+$text--dark: $secondary;
+$text: $primary-dark;
 
 /*ширина экрана*/
 $mobile-width-only: 767px;
