@@ -77,3 +77,27 @@
     }
   }
 }
+
+@media (min-width: $desktop-width){
+  .nav-menu {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    margin-left: auto;
+    outline: 2px solid red;
+    background-color: darkseagreen;
+    margin-right: 118px;
+  }
+
+  .nav-menu__item {
+    margin-left: 35px;
+  }
+
+  .nav-menu__link {
+    font-size: 1.8rem;
+  }
+
+
+
+}
