@@ -29,10 +29,6 @@
   height: 14px;
 }
 
-.nav-main__logo path {
-  fill: red;
-}
-
 .nav-main--closed .nav-main__toggle {
   position: relative;
   box-sizing: border-box;
@@ -165,4 +161,35 @@
     flex-direction: column;
     align-items: center;
   }
+}
+
+@media (min-width: $tablet-width) {
+  .nav-main__combobox {
+    padding-top: 50px;
+  }
+
+  .nav-main__container {
+    position: relative;
+    width: 89.58333333333333%;
+    width: 688px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-main__toggle {
+    display: none;
+  }
+
+  .nav-main__bar {
+    width: 96px;
+  }
+
+  .nav-main__cart {
+    position: absolute;
+    top: 42px;
+    right: 0;
+
+  }
+
+
 }
