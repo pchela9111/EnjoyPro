@@ -4,12 +4,13 @@
 }
 
 @media (min-width: $desktop-width) {
-  .header-main {
+ .header-main {
     width: 1440px;
     margin-right: auto;
     margin-left: auto;
     background-image: url("../img/bg-desktop@1x.jpg");
     background-position: left top;
+    /*background-position: 240px top;*/
     background-size: 590px 745px;
     background-repeat: no-repeat;
 

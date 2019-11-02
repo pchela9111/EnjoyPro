@@ -15,7 +15,6 @@
   font-weight: 400;
   text-transform: uppercase;
   color: $primary--light;
-  color: red;
   transition: 180ms;
 
   &:not([href]) {
@@ -42,9 +41,6 @@
     flex-wrap: wrap;
     justify-content: space-between;
     margin-left: auto;
-    outline: 2px solid red;
-    background-color: darkseagreen;
-
   }
 
   .nav-menu__item {
@@ -68,12 +64,10 @@
     &:hover,
     &:focus {
       color: $primary--light;
-      border-bottom: 1px solid $secondary;
     }
 
     &:active {
       color: rgba($primary--light, 0.3);
-        border-bottom: none;
     }
   }
 }
@@ -85,8 +79,6 @@
     flex-wrap: wrap;
     justify-content: flex-end;
     margin-left: auto;
-    outline: 2px solid red;
-    background-color: darkseagreen;
     margin-right: 118px;
   }
 
@@ -97,7 +89,4 @@
   .nav-menu__link {
     font-size: 1.8rem;
   }
-
-
-
 }
