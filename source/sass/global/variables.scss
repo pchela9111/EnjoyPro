@@ -1,14 +1,14 @@
 $primary--light: #ecf0f3;
 $primary--lightest: #ffffff;
-$primary: #51e7e9;
-$primary-dark: #544951;
+$primary: #54c3ea;
+$primary--dark: #544951;
 
 $secondary: #272727;
 
 $background--light: $primary--lightest;
 $background: $primary;
 $text--dark: $secondary;
-$text: $primary-dark;
+$text: $primary--dark;
 
 /*ширина экрана*/
 $mobile-width-only: 767px;
