@@ -1,14 +1,16 @@
-$primary--light: #ecf0f3;
-$primary--lightest: #ffffff;
-$primary: #54c3ea;
-$primary--dark: #544951;
+$primary-light: #ecf0f3;
+$primary-lightest: #ffffff;
+$primary-dark: #2d3237;
 
-$secondary: #272727;
+$secondary: #544951;
+$accent: #14d000;
+$accent-strong: #FDC315;
+$accent-stronger: #ff375b;
 
-$background--light: $primary--lightest;
-$background: $primary;
-$text--dark: $secondary;
-$text: $primary--dark;
+$background--light: $primary-lightest;
+$background: $primary-dark;
+$text-dark: $primary-dark;
+$text-light: $primary-light;
 
 /*ширина экрана*/
 $mobile-width-only: 767px;
