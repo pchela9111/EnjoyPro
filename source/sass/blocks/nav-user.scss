@@ -62,3 +62,43 @@
     background-size: 24px 24px;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .nav-user {
+    width: 211px;
+    display: flex;
+    flex-direction: row;
+    margin-left: auto;
+    margin-right: 15%;
+    outline: 2px solid yellow;
+  }
+
+  .nav-user__item {
+
+    position: relative;
+    margin-top: 35px;
+    margin-bottom: 0;
+  }
+
+  .nav-user__link {
+    font-size: 1.8rem;
+    line-height: 1.2;
+    font-weight: 700;
+    color: $text-light;
+    color: red;
+  }
+
+  .nav-user__hidden {
+    display: none;
+  }
+
+  .nav-user__box {
+    &--tel {
+      transform: translate(115px, 40px);
+    }
+
+    &--email {
+      display: none;
+    }
+  }
+}

@@ -155,3 +155,38 @@
     align-items: center;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .nav-main__combobox {
+    padding-top: 40px;
+  }
+
+  .nav-main__container {
+    position: relative;
+    width: 89.58333333333333%;
+    width: 688px;
+    display: flex;
+    flex-wrap: wrap;
+    outline: 2px solid red;
+  }
+
+  .nav-main__logo svg {
+    width: 98px;
+    height: 20px;
+  }
+
+  .nav-main__toggle {
+    display: none;
+  }
+
+  .nav-main__bar {
+    width: 96px;
+  }
+
+  .nav-main__cart {
+    position: absolute;
+    top: 45px;
+    right: 0;
+  }
+
+}
