@@ -232,7 +232,6 @@
     width: 89.58333333333333%;/*688 / 768*/
     display: flex;
     flex-wrap: wrap;
-
     align-items: flex-start;
     outline: 2px solid red;
   }
@@ -248,7 +247,7 @@
 
   .nav-main__bar {
     width: 98px;
-    background-color: darkkhaki;
+    
   }
 
   .nav-main__cart {
@@ -293,6 +292,24 @@
 
   .nav-main__wrap .nav-main__social {
     display: none;
+  }
+
+}
+
+@media (min-width: $desktop-width-1152) {
+  .nav-main__container {
+    width: 92.1875%;/*1062 / 1125*/
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    outline: 2px solid red;
+  }
+
+  .nav-main__wrap {
+    width: 54.51977401129944%;/*579 / 1062*/
   }
 
 }

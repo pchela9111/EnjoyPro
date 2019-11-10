@@ -3,7 +3,22 @@
   background-color: $background;
 }
 
-@media (min-width: $desktop-width) {
+@media (min-width: $desktop-width-1152) {
+  .header-main {
+    background-image: url("../img/1152-bg-desktop@1x.jpg"),linear-gradient(to left, $background 40%, $background 60%, $background--light 40%, $background--light 60%);
+    background-position:left top;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    outline: 2px solid aqua;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/1152-bg-desktop@2x.jpg");
+    background-size: 480px 700px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-1440) {
  .header-main {
     width: 1440px;
     margin-right: auto;

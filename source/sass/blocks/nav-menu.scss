@@ -73,6 +73,19 @@
         border-bottom: none;
     }
   }
+}
 
+@media (min-width: $desktop-width-1152) {
+  .nav-menu {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+    outline: 2px solid lime;
+  }
 
+  .nav-menu__link {
+    font-size: 1.8rem;
+  }
 }
