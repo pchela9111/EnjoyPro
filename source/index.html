@@ -18,6 +18,11 @@
          background-image: url('9.7_ - 1.png');
        }
      }
+     @media (min-width: 1152px) {
+       HTML {
+         background-image: url('MacBook - 1.png');
+       }
+     }
      @media (min-width: 1440px) {
        HTML {
          background-image: url('2-screen.png');
@@ -36,7 +41,13 @@
       <div class="nav-main__combobox">
         <div class="nav-main__container">
           <div class="nav-main__bar">
-            <a class="nav-main__logo"><img class="nav-main__image" src="img/ejpro-logo-green.svg" width="96" height="14"  alt="логотип EnjoyPro"></a>
+            <a class="nav-main__logo">
+              <picture>
+                <source media="(min-width: 1125px)" srcset="img/ejpro-logo-green.svg">
+                <source media="(min-width: 768px)" srcset="img/ejpro-logo-white.svg">
+                <img class="nav-main__image" src="img/ejpro-logo-green.svg" alt="логотип EnjoyPro">
+              </picture>
+            </a>
             <button class="nav-main__toggle" type="button"></button>
           </div>
           <div class="nav-main__wrap">

@@ -408,6 +408,19 @@ img {
   width: 100%;
   background-color: #2d3237; }
 
+@media (min-width: 1152px) {
+  .header-main {
+    background-image: url("../img/1152-bg-desktop@1x.jpg"), -webkit-gradient(linear, right top, left top, color-stop(40%, #2d3237), color-stop(60%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
+    background-image: url("../img/1152-bg-desktop@1x.jpg"), linear-gradient(to left, #2d3237 40%, #2d3237 60%, #ffffff 40%, #ffffff 60%);
+    background-position: left top;
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    outline: 2px solid aqua; } }
+  @media (min-width: 1152px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1152px) and (min-resolution: 144dpi), (min-width: 1152px) and (min-resolution: 1.5dppx) {
+    .header-main {
+      background-image: url("../img/1152-bg-desktop@2x.jpg");
+      background-size: 480px 700px; } }
+
 @media (min-width: 1440px) {
   .header-main {
     width: 1440px;
@@ -623,8 +636,7 @@ img {
   .nav-main__toggle {
     display: none; }
   .nav-main__bar {
-    width: 98px;
-    background-color: darkkhaki; }
+    width: 98px; }
   .nav-main__cart {
     position: absolute;
     top: 45px;
@@ -657,6 +669,22 @@ img {
     display: none; }
   .nav-main__wrap .nav-main__social {
     display: none; } }
+
+@media (min-width: 1152px) {
+  .nav-main__container {
+    width: 92.1875%;
+    /*1062 / 1125*/
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    outline: 2px solid red; }
+  .nav-main__wrap {
+    width: 54.51977401129944%;
+    /*579 / 1062*/ } }
 
 .nav-menu {
   width: 100%; }
@@ -713,6 +741,19 @@ img {
     .nav-menu__link:active {
       color: rgba(236, 240, 243, 0.2);
       border-bottom: none; } }
+
+@media (min-width: 1152px) {
+  .nav-menu {
+    width: 100%;
+    display: -webkit-box;
+    display: flex;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    margin-left: 0;
+    outline: 2px solid lime; }
+  .nav-menu__link {
+    font-size: 1.8rem; } }
 
 .social {
   width: 190px;
