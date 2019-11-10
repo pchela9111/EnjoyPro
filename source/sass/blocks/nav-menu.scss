@@ -33,3 +33,46 @@
     color: rgba($text-dark, 0.2);
   }
 }
+
+@media (min-width: $tablet-width) {
+  .nav-menu {
+    width: 87.11864406779661%;/*514 / 590*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: auto;
+    outline: 2px solid lime;
+  }
+
+  .nav-menu__item {
+    margin-bottom: 0;
+  }
+
+  .nav-menu__link {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $text-light;
+    padding-bottom: 2px;
+
+    &:not([href]) {
+      color: $accent;
+      border-bottom: 1px solid $primary-light;
+      border-bottom: 1px solid red;
+    }
+    &:not([href]):active {
+      color: $accent;
+    }
+
+    &:hover,
+    &:focus {
+      color: $accent;
+    }
+
+    &:active {
+      color: rgba($primary-light, 0.2);
+        border-bottom: none;
+    }
+  }
+
+
+}
