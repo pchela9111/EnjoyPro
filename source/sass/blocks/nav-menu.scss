@@ -89,3 +89,11 @@
     font-size: 1.8rem;
   }
 }
+
+@media (min-width: $desktop-width-1440) {
+  .nav-menu {
+    width: 82.1276595744680%;
+    margin-right: auto;
+    outline: 2px solid lime;
+  }
+}

@@ -410,31 +410,17 @@ img {
 
 @media (min-width: 1152px) {
   .header-main {
-    background-image: url("../img/1152-bg-desktop@1x.jpg"), -webkit-gradient(linear, right top, left top, color-stop(40%, #2d3237), color-stop(60%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
-    background-image: url("../img/1152-bg-desktop@1x.jpg"), linear-gradient(to left, #2d3237 40%, #2d3237 60%, #ffffff 40%, #ffffff 60%);
-    background-position: left top;
-    background-size: auto auto;
-    background-repeat: no-repeat;
-    outline: 2px solid aqua; } }
-  @media (min-width: 1152px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1152px) and (min-resolution: 144dpi), (min-width: 1152px) and (min-resolution: 1.5dppx) {
-    .header-main {
-      background-image: url("../img/1152-bg-desktop@2x.jpg");
-      background-size: 480px 700px; } }
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(45%, #2d3237), color-stop(55%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
+    background-image: linear-gradient(to left, #2d3237 45%, #2d3237 55%, #ffffff 40%, #ffffff 60%); } }
 
 @media (min-width: 1440px) {
   .header-main {
-    width: 1440px;
-    margin-right: auto;
-    margin-left: auto;
-    background-image: url("../img/bg-desktop@1x.jpg");
-    background-position: left top;
-    /*background-position: 240px top;*/
-    background-size: 590px 745px;
-    background-repeat: no-repeat; } }
-  @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1440px) and (min-resolution: 144dpi), (min-width: 1440px) and (min-resolution: 1.5dppx) {
-    .header-main {
-      background-image: url("../img/bg-desktop@2x.jpg");
-      background-size: 590px 745px; } }
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(40%, #2d3237), color-stop(60%, #2d3237), color-stop(40%, red), color-stop(60%, red));
+    background-image: linear-gradient(to left, #2d3237 40%, #2d3237 60%, red 40%, red 60%);
+    /*@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/1440-bg-desktop@2x.jpg"),linear-gradient(to left, $background 40%, $background 60%, $background--light 40%, $background--light 60%);
+      background-size:  590px 745px;
+    }*/ } }
 
 .nav-main {
   width: 100%; }
@@ -663,7 +649,6 @@ img {
     color: red; }
   .nav-main__box {
     top: -19px;
-    /*transform: translateX(30px);*/
     left: 160px; }
   .nav-main__button {
     display: none; }
@@ -671,20 +656,60 @@ img {
     display: none; } }
 
 @media (min-width: 1152px) {
+  .nav-main {
+    background-image: url("../img/1152-bg-desktop@1x.jpg");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: left top; } }
+  @media (min-width: 1152px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1152px) and (min-resolution: 144dpi), (min-width: 1152px) and (min-resolution: 1.5dppx) {
+    .nav-main {
+      background-image: url("../img/1152-bg-desktop@2x.jpg");
+      background-size: 480px 700px; } }
+
+@media (min-width: 1152px) {
   .nav-main__container {
     width: 92.1875%;
     /*1062 / 1125*/
-    display: -webkit-box;
-    display: flex;
-    flex-wrap: wrap;
     -webkit-box-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: start;
-            align-items: flex-start;
     outline: 2px solid red; }
   .nav-main__wrap {
     width: 54.51977401129944%;
     /*579 / 1062*/ } }
+
+@media (min-width: 1440px) {
+  .nav-main {
+    width: 1440px;
+    margin-right: auto;
+    margin-left: auto;
+    background-image: url("../img/1440-bg-desktop@1x.jpg");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: left top; } }
+  @media (min-width: 1440px) and (-webkit-min-device-pixel-ratio: 1.5), (min-width: 1440px) and (min-resolution: 144dpi), (min-width: 1440px) and (min-resolution: 1.5dppx) {
+    .nav-main {
+      background-image: url("../img/1440-bg-desktop@2x.jpg");
+      background-size: 590px 745px; } }
+
+@media (min-width: 1440px) {
+  .nav-main__container {
+    width: 1320px;
+    outline: 2px solid red; }
+  .nav-main__wrap {
+    width: 53.5606060606060%;
+    /*579 / 1320*/
+    width: 53.40909090909091%;
+    /*705 / 1320*/ }
+  .nav-main__cart {
+    position: absolute;
+    top: -11px; }
+  .nav-main__link {
+    position: absolute;
+    top: 90px;
+    right: -2px; }
+  .nav-main__box {
+    top: -16px;
+    left: 162px; } }
 
 .nav-menu {
   width: 100%; }
@@ -754,6 +779,12 @@ img {
     outline: 2px solid lime; }
   .nav-menu__link {
     font-size: 1.8rem; } }
+
+@media (min-width: 1440px) {
+  .nav-menu {
+    width: 82.1276595744680%;
+    margin-right: auto;
+    outline: 2px solid lime; } }
 
 .social {
   width: 190px;
