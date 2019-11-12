@@ -1,5 +1,6 @@
 .nav-menu {
   width: 100%;
+  outline: 2px solid red;
 }
 
 .nav-menu__item {
@@ -36,12 +37,10 @@
 
 @media (min-width: $tablet-width) {
   .nav-menu {
-    width: 87.11864406779661%;/*514 / 590*/
+    width: 74.7093023255814%;/*514 / 688*/
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-left: auto;
-    outline: 2px solid lime;
   }
 
   .nav-menu__item {
@@ -57,7 +56,6 @@
     &:not([href]) {
       color: $accent;
       border-bottom: 1px solid $primary-light;
-      border-bottom: 1px solid red;
     }
     &:not([href]):active {
       color: $accent;
@@ -77,23 +75,13 @@
 
 @media (min-width: $desktop-width-1152) {
   .nav-menu {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-left: 0;
-    outline: 2px solid lime;
-  }
-
-  .nav-menu__link {
-    font-size: 1.8rem;
+    width: 54.51977401129944%;/*579 / 1062*/
   }
 }
 
 @media (min-width: $desktop-width-1440) {
   .nav-menu {
-    width: 82.1276595744680%;
-    margin-right: auto;
-    outline: 2px solid lime;
+    width: 43.86363636363636%;/*579px / 1320px*/
+    margin-right: 130px;
   }
 }

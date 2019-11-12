@@ -3,26 +3,46 @@
   background-color: $background;
 }
 
+.header-main__bg {
+  width: 100%;
+}
+
 @media (min-width: $desktop-width-1152) {
   .header-main {
-    background-image:linear-gradient(to left, $background 45%, $background 55%, $background--light 40%, $background--light 60%);
+    background-image:linear-gradient(to left, $background 41%, $background 59%, $background--light 40%, $background--light 60%);
+  }
+
+  .header-main__bg {
+    background-image: url("../img/1152-bg-desktop@1x.jpg");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/1152-bg-desktop@2x.jpg");
+      background-size: 480px 700px;
+    }
   }
 }
 
 @media (min-width: $desktop-width-1440) {
- .header-main {
+  .header-main {
+    background-image:linear-gradient(to left, $background 42.5%, $background 57.5%, $background--light 40%, $background--light 60%);
+  }
 
-   background-image: linear-gradient(to left, $background 40%, $background 60%, red 40%, red 60%);
+  .header-main__bg {
+    width: 1440px;
+    background-image: url("../img/1440-bg-desktop@1x.jpg");
+    background-size: auto auto;
+    background-repeat: no-repeat;
+    background-position: left top;
+    outline: 4px solid green;
+    margin-right: auto;
+    margin-left: auto;
 
-
-
-
-
-
-
-    /*@media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/1440-bg-desktop@2x.jpg"),linear-gradient(to left, $background 40%, $background 60%, $background--light 40%, $background--light 60%);
-      background-size:  590px 745px;
-    }*/
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/1440-bg-desktop@2x.jpg");
+      background-size: 480px 700px;
+    }
   }
 }
