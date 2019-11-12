@@ -1,9 +1,9 @@
 .nav-menu {
   width: 100%;
-  outline: 2px solid red;
 }
 
 .nav-menu__item {
+  display: block;
   text-align: center;
   margin-bottom: 15px;
 }
@@ -41,6 +41,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-left: auto;
   }
 
   .nav-menu__item {
