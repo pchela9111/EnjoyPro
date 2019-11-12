@@ -47,3 +47,24 @@
     }
   }
 }
+
+@media (min-width: $tablet-width) {
+  .button--promo {
+    margin-left: 34%;
+    margin-bottom: 85px;
+  }
+}
+
+@media (min-width: $desktop-width-1152) {
+  .button--promo {
+    margin-left: 45.5%;
+    margin-bottom: 75px;
+  }
+}
+
+@media (min-width: $desktop-width-1440) {
+  .button--promo {
+    margin-left: 47%;
+    margin-bottom: 80px;
+  }
+}
