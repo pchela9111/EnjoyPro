@@ -9,6 +9,14 @@
 
 @font-face {
   font-family: "Roboto";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/roboto-black.woff2") format("woff2");
+  src: url("../fonts/ubuntu-black.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Roboto";
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/roboto-bold.woff2") format("woff2");
