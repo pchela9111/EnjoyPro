@@ -1,7 +1,7 @@
 .promo {
   width: 100%;
   padding-top: 43px;
-  padding-bottom: 43px;
+  padding-bottom: 40px;
 }
 
 .promo__container {
@@ -52,7 +52,7 @@
 @media (min-width: $tablet-width) {
   .promo {
     padding-top: 145px;
-    padding-bottom: 43px;
+    padding-bottom: 55px;
   }
 
   .promo__container {
@@ -86,11 +86,12 @@
 @media (min-width: $desktop-width-1152) {
   .promo {
     padding-top: 125px;
-    padding-bottom: 43px;
+    padding-bottom: 55px;
   }
 
   .promo__container {
     width: 92.1875%;/*1062 / 1125*/
+    width: 1062px;
   }
 
   .promo__name {
@@ -115,7 +116,7 @@
 @media (min-width: $desktop-width-1440) {
   .promo {
     padding-top: 185px;
-    padding-bottom: 43px;
+    padding-bottom: 55px;
   }
 
   .promo__container {
