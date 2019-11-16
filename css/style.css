@@ -317,6 +317,13 @@ template {
 
 @font-face {
   font-family: "Roboto";
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/roboto-black.woff2") format("woff2");
+  src: url("../fonts/ubuntu-black.woff") format("woff"); }
+
+@font-face {
+  font-family: "Roboto";
   font-weight: 700;
   font-display: swap;
   src: url("../fonts/roboto-bold.woff2") format("woff2");
@@ -434,8 +441,8 @@ img {
 
 @media (min-width: 1152px) {
   .header-main {
-    background-image: -webkit-gradient(linear, right top, left top, color-stop(41%, #2d3237), color-stop(59%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
-    background-image: linear-gradient(to left, #2d3237 41%, #2d3237 59%, #ffffff 40%, #ffffff 60%); }
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(42%, #2d3237), color-stop(58%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
+    background-image: linear-gradient(to left, #2d3237 42%, #2d3237 58%, #ffffff 40%, #ffffff 60%); }
   .header-main__bg {
     background-image: url("../img/1152-bg-desktop@1x.jpg");
     background-size: auto auto;
@@ -448,8 +455,8 @@ img {
 
 @media (min-width: 1440px) {
   .header-main {
-    background-image: -webkit-gradient(linear, right top, left top, color-stop(42.5%, #2d3237), color-stop(57.5%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
-    background-image: linear-gradient(to left, #2d3237 42.5%, #2d3237 57.5%, #ffffff 40%, #ffffff 60%); }
+    background-image: -webkit-gradient(linear, right top, left top, color-stop(43.2%, #2d3237), color-stop(56.8%, #2d3237), color-stop(40%, #ffffff), color-stop(60%, #ffffff));
+    background-image: linear-gradient(to left, #2d3237 43.2%, #2d3237 56.8%, #ffffff 40%, #ffffff 60%); }
   .header-main__bg {
     width: 1440px;
     background-image: url("../img/1440-bg-desktop@1x.jpg");
@@ -612,7 +619,7 @@ img {
       height: 22px;
       top: 0;
       left: 0;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z' fill='%2d3237'/%3E%3C/svg%3E%0A");
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z' fill='%232d3237'/%3E%3C/svg%3E");
       background-position: 0 0;
       background-size: 22px 22px;
       background-repeat: no-repeat;
@@ -800,7 +807,7 @@ img {
 .promo {
   width: 100%;
   padding-top: 43px;
-  padding-bottom: 43px; }
+  padding-bottom: 40px; }
 
 .promo__container {
   width: 87.5%;
@@ -840,7 +847,7 @@ img {
   margin-bottom: 5px; }
 
 .promo__text {
-  width: 220px;
+  width: 210px;
   font-weight: 400;
   font-size: 1.8rem;
   line-height: 1.2;
@@ -851,7 +858,7 @@ img {
 @media (min-width: 768px) {
   .promo {
     padding-top: 145px;
-    padding-bottom: 43px; }
+    padding-bottom: 55px; }
   .promo__container {
     width: 89.58333333333333%;
     /*688 / 768*/
@@ -877,10 +884,11 @@ img {
 @media (min-width: 1152px) {
   .promo {
     padding-top: 125px;
-    padding-bottom: 43px; }
+    padding-bottom: 55px; }
   .promo__container {
     width: 92.1875%;
-    /*1062 / 1125*/ }
+    /*1062 / 1125*/
+    width: 1062px; }
   .promo__name {
     margin-left: 45.5%;
     margin-bottom: 10px; }
@@ -897,7 +905,7 @@ img {
 @media (min-width: 1440px) {
   .promo {
     padding-top: 185px;
-    padding-bottom: 43px; }
+    padding-bottom: 55px; }
   .promo__container {
     width: 1320px; }
   .promo__name {
@@ -971,5 +979,223 @@ img {
   .social--promo {
     margin-left: auto;
     margin-right: 0; } }
+
+.brands {
+  width: 100%;
+  background-color: #ffffff;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: #ffffff; }
+
+.brands__container {
+  width: 87.5%;
+  /*280 / 320*/
+  margin-right: auto;
+  margin-left: auto;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  -webkit-box-align: center;
+          align-items: center; }
+
+.brands__title {
+  width: 180px;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: #2d3237;
+  margin-bottom: 35px; }
+
+.brands__text {
+  display: none; }
+
+.brands__list {
+  position: relative;
+  width: 225px;
+  display: -webkit-box;
+  display: flex;
+  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+          align-items: center;
+  padding-top: 20px; }
+  .brands__list::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #544951;
+    top: 0;
+    left: 0; }
+  .brands__list::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    background-color: #544951;
+    bottom: 0;
+    left: 0; }
+
+.brands__item {
+  margin-bottom: 20px; }
+  .brands__item--fermod {
+    margin-right: 10px; }
+
+@media (min-width: 768px) {
+  .brands {
+    position: relative;
+    padding-top: 60px;
+    padding-bottom: 50px; }
+  .brands__container {
+    width: 89.58333333333333%;
+    /*688 / 768*/
+    /*width: 688px;*/
+    box-sizing: border-box; }
+  .brands__title {
+    width: 100%;
+    text-align: left;
+    font-size: 2.9rem;
+    margin-left: 70px;
+    margin-bottom: 15px; }
+    .brands__title span {
+      display: none; }
+  .brands__text {
+    display: block;
+    box-sizing: border-box;
+    width: 70%;
+    font-size: 1.8rem;
+    line-height: 1.5;
+    color: #000000;
+    -webkit-box-ordinal-group: 2;
+            order: 1;
+    padding-right: 10px;
+    padding-left: 10px;
+    margin-left: 30%; }
+  .brands__list {
+    position: relative;
+    width: 70%;
+    box-sizing: border-box;
+    padding-top: 0;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-left: 30%;
+    margin-bottom: 20px; }
+    .brands__list::before {
+      position: absolute;
+      content: "";
+      width: 97px;
+      height: 97px;
+      top: 30px;
+      left: -170px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 483.85 483.85'%3E%3Cpath d='M471.325 211.856l-56.9-56.9c-23.4-23.4-9.1-48.1 16.4-49.6 42-2.6 65.6-47.4 31.3-84.7-37.3-34.2-81.9-10.7-84.5 31.2-1.6 25.5-26.5 39.9-49.8 16.6l-55.7-55.7c-16.7-16.7-43.8-16.7-60.5 0l-56.4 56.4c-23.4 23.4-48.2 8.9-49.8-16.6-2.6-42-47.6-65.9-84.9-31.6-34.4 37.4-10.5 82.4 31.5 85 25.5 1.6 40 26.5 16.7 49.9l-56.2 56.1c-16.7 16.7-16.7 43.8 0 60.5l55.7 55.7c23.4 23.3 9.5 47.6-16 49.2-42 2.6-65.5 47.3-31.2 84.6 37.3 34.3 81.8 10.9 84.4-31.1 1.6-25.5 26-39.5 49.4-16.2l56.2 56.2c17 17 44.8 17 61.8.1l39.4-39.4 16.9-16.9c22.1-23.1 7.8-47.4-17.4-49-42-2.6-65.8-47.6-31.5-84.9 37.3-34.3 82.3-10.4 84.9 31.6 1.6 25.2 25.8 39.4 48.9 17.3l15.3-15.3 41.2-41.2.2-.2.6-.6c16.7-16.7 16.7-43.8 0-60.5z' fill='%2314d000'/%3E%3C/svg%3E%0A");
+      background-size: 97px 97px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-color: transparent; }
+    .brands__list::after {
+      position: absolute;
+      content: "";
+      width: 100%;
+      height: 1px;
+      background-color: #544951;
+      bottom: 0;
+      left: 0; }
+  .brands__item {
+    margin-bottom: 20px; }
+    .brands__item--fermod {
+      margin-right: 0; } }
+
+@media (min-width: 1152px) {
+  .brands {
+    padding-top: 70px;
+    padding-bottom: 50px; }
+  .brands__container {
+    position: relative;
+    width: 92.1875%;
+    /*1062 / 1125*/
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: start;
+            align-items: flex-start;
+    flex-wrap: wrap; }
+    .brands__container::after {
+      position: absolute;
+      content: "";
+      width: 90%;
+      height: 1px;
+      background-color: #544951;
+      top: 150px;
+      left: 30px; }
+  .brands__title {
+    width: 38%;
+    box-sizing: border-box;
+    font-size: 3.1rem;
+    margin-left: 30px;
+    margin-bottom: 0; }
+  .brands__text {
+    position: absolute;
+    width: 30%;
+    top: 180px;
+    left: -300px; }
+  .brands__list {
+    width: 58.5%;
+    justify-content: space-around;
+    padding-right: 20px;
+    padding-left: 20px;
+    margin-left: 0;
+    margin-bottom: 0; }
+    .brands__list::before {
+      top: 110px;
+      left: -50px; }
+    .brands__list::after {
+      width: 1px;
+      height: 100%; }
+  .brands__item--sever, .brands__item--fermod {
+    margin: 25px 50px; }
+  .brands__item--polair, .brands__item--mth {
+    margin: 35px 50px 55px; } }
+
+@media (min-width: 1440px) {
+  .brands {
+    padding-top: 95px;
+    padding-bottom: 50px; }
+  .brands__container {
+    width: 1320px; }
+    .brands__container::after {
+      top: 160px;
+      left: 50px; }
+  .brands__title {
+    width: 34%;
+    font-size: 3.2rem;
+    font-weight: 800;
+    margin-left: 55px;
+    margin-bottom: 0px; }
+  .brands__text {
+    font-size: 1.9rem;
+    top: 190px;
+    left: -350px; }
+  .brands__list {
+    width: 60%; }
+    .brands__list::before {
+      top: 33%;
+      left: -45px;
+      z-index: 5; }
+    .brands__list::after {
+      top: 0;
+      left: 0; }
+  .brands__item--sever, .brands__item--fermod {
+    margin: 10px 50px 25px; }
+  .brands__item--polair, .brands__item--mth {
+    margin: 25px 50px 55px; } }
 
 /*# sourceMappingURL=style.css.map */
