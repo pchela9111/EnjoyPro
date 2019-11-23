@@ -1,7 +1,7 @@
 .brands {
   width: 100%;
   background-color: $background--light;
-  padding-top: 40px;
+  padding-top: 50px;
   padding-bottom: 50px;
 }
 
@@ -38,53 +38,51 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 25px;
+  padding-top: 35px;
 
   &::before {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 226px;
     height: 1px;
     background-color: $secondary;
     top: 0;
-    left: 0;
+    left: calc(50% - 226px / 2);
   }
 
   &::after {
     position: absolute;
     content: "";
-    width: 100%;
+    width: 226px;
     height: 1px;
     background-color: $secondary;
     bottom: 0;
-    left: 0;
+    left: calc(50% - 226px / 2);
   }
 }
 
 .brands__item {
   position: relative;
-  margin-bottom: 25px;
+  margin-bottom: 23px;
 
   &::before {
     position: absolute;
     content: "";
-    width: 12px;
-    height: 12px;
+    width: 9px;
+    height: 9px;
     background-color: $background;
-    border-radius: 50px;
-    bottom: -19px;
-    left: calc(50% - 12px / 2);
+    border-radius: 5px;
+    top: -15px;
+    left: calc(50% - 9px / 2);
+    /*opacity: 0.3;*/
   }
 
-  &:last-child::before {
-    display: none;
-  }
 }
 
 .brands__link {
   display: block;
   font-weight: 700;
-  font-size: 3.2rem;
+  font-size: 2.4rem;
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-transform: uppercase;
@@ -94,7 +92,7 @@
 @media (min-width: $tablet-width) {
   .brands {
     padding-top: 60px;
-    padding-bottom: 50px;
+    padding-bottom: 60px;
   }
 
   .brands__container {
@@ -140,7 +138,7 @@
     line-height: 1.5;
     color: $text-darkness;
     order: 1;
-    margin-left: 32%;
+    margin-left: 30%;
   }
 
   .brands__list {
@@ -169,8 +167,10 @@
     margin-bottom: 20px;
 
     &::before {
+      width: 12px;
+      height: 12px;
       top: calc(50% - 12px / 2);
-      left: 110%;
+      left: -22px;
     }
   }
 
@@ -182,18 +182,19 @@
 @media (min-width: $desktop-width-1152) {
   .brands {
     padding-top: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 90px;
   }
 
   .brands__container {
     width: 92.1875%;/*1062 / 1125*/
+    width: 1062px;
   }
 
   .brands__title {
     width: 26%;
-    font-size: 4.8rem;
-    margin-top: 70px;
-    margin-left: 10%;
+    font-size: 4.2rem;
+    margin-top: 65px;
+    margin-left: 30px;
 
     &::before {
       display: none;
@@ -222,8 +223,8 @@
 
 @media (min-width: $desktop-width-1440) {
   .brands {
-    padding-top: 30px;
-    padding-bottom: 50px;
+    padding-top: 50px;
+    padding-bottom: 100px;
   }
 
   .brands__container {
@@ -233,26 +234,26 @@
   .brands__title {
     width: 26%;
     font-size: 4.8rem;
-    margin-top: 70px;
-    margin-left: 10%;
+    margin-left: 60px;
   }
 
   .brands__text {
-    width: 55%;
-    font-size: 1.9rem;
+    width: 53%;
+    font-size: 2.1rem;
     margin-left: 45%;
   }
 
   .brands__list {
-    width: 52%;
-    margin-right: 40px;
+    width: 51%;
+    margin-right: 50px;
   }
-  
+
   .brands__item {
     margin-bottom: 20px;
 
     &::before {
-      left: 122%;
+      left: -22px;
     }
   }
+
 }

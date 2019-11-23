@@ -1,0 +1,351 @@
+.features {
+  width: 100%;
+  padding-top: 55px;
+  background-color: $background;
+}
+
+.features__container {
+  width: 280px;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__title {
+  width: 80%;
+  text-align: center;
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: uppercase;
+  color: $text-light;
+  margin-bottom: 65px;
+}
+
+.features__list {
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  margin-bottom: 28px;
+}
+
+.features__item {
+  position: relative;
+  margin-bottom: 57px;
+
+  &--assortment::before {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 29px;
+    top: -36px;
+    left: 0;
+    background-image: url("../img/jigsaw.svg");
+    background-size: 29px 29px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+  }
+
+  &--delivery::before {
+    position: absolute;
+    content: "";
+    width: 28px;
+    height: 28px;
+    top: -36px;
+    left: 0;
+    background-image: url("../img/puzzle-bag.svg");
+    background-size: 28px 28px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+  }
+
+  &--service::before {
+    position: absolute;
+    content: "";
+    width: 29px;
+    height: 29px;
+    top: -36px;
+    left: 0;
+    background-image: url("../img/puzzle-hand.svg");
+    background-size: 29px 29px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+  }
+}
+
+.features__text {
+  width: 225px;
+  padding: 0;
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 1.4;
+  color: $text-light;
+  
+  span {
+    display: block;
+  }
+}
+
+.features__notice {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.features__notice-text {
+  width: 275px;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.3;
+  color: $text-light;
+  margin-bottom: 30px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    width: 37px;
+    height: 37px;
+    top: -50px;
+    left: calc(50% - 37px / 2);
+    background-image: url("../img/puzzle-email.svg");
+    background-size: 37px 37px;
+    background-repeat: no-repeat;
+    background-position: 0 0;
+    background-color: transparent;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .features {
+    padding-top: 70px;
+  }
+
+  .features__container {
+    width: 89.58333333333333%;/*688 / 768*/
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    box-sizing: border-box;
+  }
+
+  .features__title {
+    position: relative;
+    text-align: left;
+    font-size: 2.9rem;
+    margin-bottom: 50px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      width: 154px;
+      height: 154px;
+      top: 20px;
+      right: -30px;
+      background-image: url("../img/heart-puzzle.svg");
+      background-size: 154px 154px;
+      background-repeat: no-repeat;
+      background-position: 0 0;
+      background-color: transparent;
+    }
+  }
+
+  .features__list {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 0;
+    margin-bottom: 70px;
+  }
+
+  .features__item {
+    width: 100%;
+
+    &--assortment::before {
+      display: none;
+    }
+
+    &--delivery::before {
+      display: none;
+    }
+
+    &--service::before {
+      display: none;
+    }
+
+    &:not(:first-child) {
+      width: 50%;
+    }
+  }
+
+  .features__text {
+    width: 260px;
+  }
+
+  .features__notice {
+    width: 76%;/*529px / 688px*/
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-left: 45px;
+  }
+
+
+  .features__notice-text {
+    width: 230px;
+    font-size: 2.1rem;
+    margin-bottom: 0;
+
+    &::before {
+      width: 54px;
+      height: 54px;
+      top: -70px;
+      left: calc(50% - 54px / 2);
+      background-size: 54px 54px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-1152) {
+  .features {
+    padding-top: 60px;
+  }
+
+  .features__container {
+    width: 92.1875%;/*1062 / 1125*/
+  }
+
+  .features__title {
+    font-size: 3.1rem;
+    margin-bottom: 65px;
+    margin-left: 30px;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .features__list {
+    margin-bottom: 75px;
+  }
+
+  .features__item {
+    width: 33.33333333333333%;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+
+    &--delivery::before {
+      display: block;
+      width: 72px;
+      height: 72px;
+      top: -95px;
+      left: calc(50% - 72px / 2);
+      background-size: 72px 72px;
+    }
+
+    &--service::before {
+      display: block;
+      width: 67px;
+      height: 67px;
+      top: -90px;
+      left: calc(50% - 67px / 2);
+      background-size: 67px 67px;
+    }
+
+    &:not(:first-child) {
+      width: 33.33333333333333%;
+    }
+  }
+
+  .features__text {
+    text-align: center;
+    width: 275px;
+  }
+
+  .features__notice {
+    width: 72%;/*806px / 1062px*/
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+
+  .features__notice-text {
+    width: 65%;
+    box-sizing: border-box;
+    padding-left: 90px;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+      top: 0;
+      left: 0;
+      background-size: 60px 60px;
+    }
+  }
+
+}
+
+@media (min-width: $desktop-width-1440) {
+  .features {
+    padding-top: 80px;
+  }
+
+  .features__container {
+    width: 1320px;
+  }
+
+  .features__title {
+    font-size: 3.6rem;
+    margin-bottom: 60px;
+    margin-left: 60px;
+  }
+
+
+  .features__list {
+    margin-bottom: 65px;
+  }
+
+  .features__item {
+    &--delivery::before {
+      width: 81px;
+      height: 81px;
+      top: -110px;
+      left: calc(50% - 81px / 2);
+      background-size: 81px 81px;
+    }
+
+    &--service::before {
+      width: 81px;
+      height: 81px;
+      top: -110px;
+      left: calc(50% - 81px / 2);
+      background-size: 81px 81px;
+    }
+  }
+
+  .features__notice {
+    width: 61%;
+  }
+
+  .features__notice-text {
+    width: 60%;
+    padding-left: 130px;
+    margin-left: 12%;
+
+    &::before {
+      width: 84px;
+      height: 84px;
+      top: -10px;
+      left: 0;
+      background-size: 84px 84px;
+    }
+  }
+}
