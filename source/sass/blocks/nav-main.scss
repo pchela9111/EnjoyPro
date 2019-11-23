@@ -46,7 +46,7 @@
 
   &:hover,
   &:focus {
-    background-color: $accent;
+    background-color: $accent-strong;
   }
 
   &::before {
@@ -80,7 +80,7 @@
 
   &:hover,
   &:focus {
-    color: $accent;
+    color: $accent-strong;
   }
 
   &:active {
@@ -102,7 +102,7 @@
 
   &:hover,
   &:focus {
-    background-color: $accent;
+    background-color: $accent-strong;
   }
 
   &::before {
@@ -329,7 +329,7 @@
   .nav-main__logo {
     width: 344px;
     height: 21px;
-    
+
   }
 }
 
