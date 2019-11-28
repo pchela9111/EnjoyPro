@@ -19,3 +19,13 @@ navToggle.addEventListener("click", function() {
     navLogo.src = "img/ejpro-logo-white.svg";
   }
 });
+
+if (document.querySelector('.catalog__filter-menu')) {
+  var sortingLink = document.querySelector('.catalog__btn');
+  var sortingPopup = document.querySelector('.catalog__filter-menu');
+
+  sortingLink.addEventListener('click', function (a) {
+    a.preventDefault();
+    sortingPopup.classList.toggle('catalog__filter-menu--opened');
+  });
+}
