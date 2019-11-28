@@ -182,7 +182,7 @@
 @media (min-width: $desktop-width-1152) {
   .brands {
     padding-top: 70px;
-    padding-bottom: 90px;
+    padding-bottom: 105px;
   }
 
   .brands__container {
@@ -217,14 +217,16 @@
   }
 
   .brands__link {
-    font-size: 3.2rem;
+    font-size: 2.8rem;
+    font-weight: 800;
+
   }
 }
 
 @media (min-width: $desktop-width-1440) {
   .brands {
     padding-top: 50px;
-    padding-bottom: 100px;
+    padding-bottom: 115px;
   }
 
   .brands__container {
