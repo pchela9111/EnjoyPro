@@ -563,7 +563,8 @@ img {
   -webkit-transition: 180ms;
   transition: 180ms; }
   .nav-main__cart:hover, .nav-main__cart:focus {
-    background-color: #FDC315; }
+    background-color: #14d000;
+    border: 1px solid #ecf0f3; }
   .nav-main__cart::before {
     position: absolute;
     content: "";
@@ -590,9 +591,9 @@ img {
   -webkit-transition: 180ms;
   transition: 180ms; }
   .nav-main__tel:hover, .nav-main__tel:focus {
-    color: #FDC315; }
+    color: #14d000; }
   .nav-main__tel:active {
-    color: rgba(45, 50, 55, 0.1); }
+    color: rgba(236, 240, 243, 0.3); }
 
 .nav-main__box-tel {
   display: block;
@@ -606,7 +607,8 @@ img {
   top: -63px;
   left: calc(50% - 50px / 2); }
   .nav-main__box-tel:hover, .nav-main__box-tel:focus {
-    background-color: #FDC315; }
+    background-color: #14d000;
+    border: 1px solid #ecf0f3; }
   .nav-main__box-tel::before {
     position: absolute;
     content: "";
@@ -1474,8 +1476,6 @@ img {
   background-color: #ffffff; }
 
 .catalog__container {
-  width: 87.5%;
-  /*280 / 320*/
   width: 280px;
   margin-right: auto;
   margin-left: auto;
@@ -1707,7 +1707,11 @@ img {
     background-size: 20px 13px; }
   .catalog__brands-menu {
     width: 180px;
-    top: 48px; } }
+    top: 48px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px; } }
 
 @media (min-width: 1152px) {
   .catalog {
@@ -1847,6 +1851,7 @@ img {
             justify-content: space-between; }
   .cards__item {
     width: 324px;
+    width: 47.09302325581395%;
     padding-bottom: 30px;
     margin-bottom: 40px; }
   .cards__name {

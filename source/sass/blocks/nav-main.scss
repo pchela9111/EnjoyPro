@@ -46,7 +46,8 @@
 
   &:hover,
   &:focus {
-    background-color: $accent-strong;
+    background-color: $accent;
+    border: 1px solid $primary-light;
   }
 
   &::before {
@@ -80,11 +81,11 @@
 
   &:hover,
   &:focus {
-    color: $accent-strong;
+    color: $accent;
   }
 
   &:active {
-    color: rgba($text-dark, 0.1);
+    color: rgba($text-light, 0.3);
   }
 }
 
@@ -102,7 +103,8 @@
 
   &:hover,
   &:focus {
-    background-color: $accent-strong;
+    background-color: $accent;
+    border: 1px solid $primary-light;
   }
 
   &::before {
