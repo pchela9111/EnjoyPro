@@ -29,6 +29,7 @@
   width: 87.5%; /*280 / 320*/
   width: 280px;
   border-radius: 5px;
+  margin-bottom: 45px;
 }
 
 .catalog__filter-row {
@@ -41,6 +42,7 @@
   align-items: center;
   background-color: $background;
   border-radius: 5px;
+
 }
 
 .catalog__btn {
@@ -159,6 +161,8 @@
   left: 0;
   right: 0;
   background-color: $background;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   border-top: 2px solid $primary-light;
 }
 
@@ -206,6 +210,7 @@
     width: 100%;
     background-color: $background;
     display: flex;
+    margin-bottom: 65px;
   }
 
   .catalog__filter-row {
@@ -294,6 +299,10 @@
 
   .catalog__container {
     width: 92.1875%;/*1062 / 1125*/
+  }
+
+  .catalog__filter {
+    margin-bottom: 75px;
   }
 
   .catalog__title {

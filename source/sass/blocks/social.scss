@@ -22,7 +22,8 @@
 
   &:hover,
   &:focus {
-    background-color: $accent-strong;
+    background-color: $accent;
+    border: 1px solid $primary-light;
   }
 
   &::before {

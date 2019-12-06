@@ -12,7 +12,7 @@
       content: "";
       width: 26px;
       height: 22px;
-      top: calc(50% - 26px / 2);
+      top: 19px;
       right: 23px;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 492.004 492.004'%3E%3Cpath d='M484.14 226.886L306.46 49.202c-5.072-5.072-11.832-7.856-19.04-7.856-7.216 0-13.972 2.788-19.044 7.856l-16.132 16.136c-5.068 5.064-7.86 11.828-7.86 19.04 0 7.208 2.792 14.2 7.86 19.264L355.9 207.526H26.58C11.732 207.526 0 219.15 0 234.002v22.812c0 14.852 11.732 27.648 26.58 27.648h330.496L252.248 388.926c-5.068 5.072-7.86 11.652-7.86 18.864 0 7.204 2.792 13.88 7.86 18.948l16.132 16.084c5.072 5.072 11.828 7.836 19.044 7.836 7.208 0 13.968-2.8 19.04-7.872l177.68-177.68c5.084-5.088 7.88-11.88 7.86-19.1.016-7.244-2.776-14.04-7.864-19.12z' fill='%232d3237'/%3E%3C/svg%3E");
       background-position: 0 0;
@@ -52,18 +52,21 @@
     background-color: $accent;
     padding: 20px 30px;
     border-radius: 50px;
-    margin-bottom: 30px;
     border: 1px solid $secondary;
 
     &:hover,
     &:focus {
-      background-color: $accent-strong;
-      color: $text-dark;
+      background-color: desaturate($accent, 20%);
+      border: 1px solid $primary-light;
     }
 
     &:active {
-      color: rgba($text-dark, 0.3%);
+      color: rgba($text-light, 0.3%);
     }
+  }
+
+  &--promo {
+    margin-bottom: 30px;
   }
 
   &--secondary {
@@ -76,19 +79,28 @@
     background-color: $primary-light;
     padding: 20px 30px;
     border-radius: 50px;
-    margin-bottom: 30px;
+
     border: 1px solid $secondary;
 
     &:hover,
     &:focus {
-      background-color: desaturate($primary-light, 60%);
-      background-color: $accent-strong;
+      background-color: $accent;
+      border: 1px solid $primary-light;
     }
 
     &:active {
       color: rgba($text-dark, 0.3%);
     }
 
+  }
+
+  .button--features {
+    margin-bottom: 0;
+  }
+
+  &--cards {
+    width: 280px;
+    margin-bottom: 25px;
   }
 }
 
@@ -98,9 +110,10 @@
     margin-bottom: 85px;
   }
 
-  .button--features {
-    margin-top: 5px;
+  .button--cards {
+    margin-bottom: 30px;
   }
+
 }
 
 @media (min-width: $desktop-width-1152) {
@@ -122,5 +135,9 @@
 
   .button--features {
     margin-top: 5px;
+  }
+
+  .button--cards {
+    width: 310px;
   }
 }
