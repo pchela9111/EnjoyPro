@@ -2,9 +2,14 @@
   display: block;
   box-sizing: border-box;
   line-height: 1.2;
+  font-weight: 700;
   text-transform: uppercase;
   border: none;
+  border-radius: 50px;
+  border: 1px solid $secondary;
+
   transition: 180ms;
+  cursor: pointer;
 
   &--arrow-right {
     &::before {
@@ -44,15 +49,9 @@
 
   &--base {
     position: relative;
-    width: 209px;
     height: 60px;
-    font-weight: bold;
-    font-size: 1.8rem;
     color: $text-light;
     background-color: $accent;
-    padding: 20px 30px;
-    border-radius: 50px;
-    border: 1px solid $secondary;
 
     &:hover,
     &:focus {
@@ -65,22 +64,28 @@
     }
   }
 
-  &--promo {
-    margin-bottom: 30px;
+  &--accent-strong {
+    position: relative;
+    height: 60px;
+    color: $text-dark;
+    background-color: $accent-strong;
+
+    &:hover,
+    &:focus {
+      background-color: desaturate($accent-strong, 20%);
+      border: 1px solid $primary-light;
+    }
+
+    &:active {
+      color: rgba($text-dark, 0.3%);
+    }
   }
 
   &--secondary {
     position: relative;
-    width: 209px;
     height: 60px;
-    font-weight: bold;
-    font-size: 1.8rem;
     color: $text-dark;
     background-color: $primary-light;
-    padding: 20px 30px;
-    border-radius: 50px;
-
-    border: 1px solid $secondary;
 
     &:hover,
     &:focus {
@@ -91,14 +96,59 @@
     &:active {
       color: rgba($text-dark, 0.3%);
     }
+
   }
 
-  .button--features {
+  &--lightest {
+    position: relative;
+    width: 280px;
+    position: relative;
+    height: 60px;
+    font-size: 1.6rem;
+    color: $text-dark;
+    background-color: $background-light;
+    padding: 20px 30px;
+  }
+
+  &--nav {
+    width: 209px;
+    font-size: 1.8rem;
+    padding: 20px 30px;
+  }
+
+  &--promo {
+    width: 209px;
+    font-size: 1.8rem;
+    padding: 20px 30px;
+    margin-bottom: 30px;
+  }
+
+  &--features {
+    width: 209px;
+    font-size: 1.8rem;
+    padding: 20px 30px;
     margin-bottom: 0;
   }
 
   &--cards {
-    width: 280px;
+    width: 260px;
+    font-size: 1.8rem;
+    margin-bottom: 25px;
+  }
+
+  &--cart {
+    width: 260px;
+    font-size: 1.5rem;
+    text-align: left;
+    padding: 20px 20px;
+    margin-bottom: 20px;
+  }
+
+  &--call {
+    width: 260px;
+    padding: 20px 30px;
+    text-align: left;
+    font-size: 1.6rem;
     margin-bottom: 25px;
   }
 }
@@ -112,6 +162,7 @@
   .button--cards {
     margin-bottom: 30px;
   }
+
 }
 
 @media (min-width: $desktop-width-1152) {

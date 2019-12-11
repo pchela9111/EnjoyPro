@@ -42,3 +42,22 @@ if (document.querySelector('.catalog__brands-menu')) {
     menuPopup.classList.toggle('catalog__brands-menu--opened');
   });
 }
+
+var tabs = document.querySelector('.tabs__menu').children;
+var tabcontents = document.querySelector('.tabs__desc').children;
+
+var myFunction = function() {
+	var tabchange = this.mynum;
+	for(var int=0;int<tabcontents.length;int++){
+		tabcontents[int].className = ' tabs__content';
+		tabs[int].className = ' tabs__btn';
+	}
+	tabcontents[tabchange].classList.add('tabs__content--active');
+	this.classList.add('tabs__btn--current');
+}
+
+
+for(var index=0;index<tabs.length;index++){
+	tabs[index].mynum=index;
+	tabs[index].addEventListener('click', myFunction, false);
+}
