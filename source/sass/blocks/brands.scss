@@ -1,8 +1,8 @@
 .brands {
   width: 100%;
-  background-color: $background--light;
+  background-color: $background-light;
   padding-top: 50px;
-  padding-bottom: 50px;
+  padding-bottom: 60px;
 }
 
 .brands__container {
@@ -38,7 +38,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 35px;
+  padding-top: 55px;
 
   &::before {
     position: absolute;
@@ -63,20 +63,24 @@
 
 .brands__item {
   position: relative;
-  margin-bottom: 23px;
+  margin-bottom: 40px;
 
   &::before {
     position: absolute;
     content: "";
-    width: 9px;
-    height: 9px;
-    background-color: $background;
-    border-radius: 5px;
-    top: -15px;
-    left: calc(50% - 9px / 2);
-    /*opacity: 0.3;*/
+    width: 30px;
+    height: 30px;
+    top: -35px;
+    left: calc(50% - 30px / 2);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 49.94 49.94' fill='%2314d000'%3E%3Cpath d='M48.856 22.73a3.56 3.56 0 00.906-3.671 3.56 3.56 0 00-2.892-2.438l-12.092-1.757a1.58 1.58 0 01-1.19-.865L28.182 3.043a3.56 3.56 0 00-3.212-1.996 3.56 3.56 0 00-3.211 1.996L16.352 14c-.23.467-.676.79-1.191.865L3.069 16.622A3.56 3.56 0 00.177 19.06a3.56 3.56 0 00.906 3.671l8.749 8.528c.373.364.544.888.456 1.4L8.224 44.701a3.506 3.506 0 00.781 2.904c1.066 1.267 2.927 1.653 4.415.871l10.814-5.686a1.619 1.619 0 011.472 0l10.815 5.686a3.544 3.544 0 001.666.417c1.057 0 2.059-.47 2.748-1.288a3.505 3.505 0 00.781-2.904l-2.065-12.042a1.582 1.582 0 01.456-1.4l8.749-8.529z'/%3E%3C/svg%3E");
+    background-position: 0 0;
+    background-size: 30px 30px;
+    background-color: transparent;
   }
 
+  &:last-of-type {
+    margin-bottom: 25px;
+  }
 }
 
 .brands__link {
@@ -86,7 +90,7 @@
   line-height: 1.2;
   letter-spacing: 0.01em;
   text-transform: uppercase;
-  color: rgba($text-dark, 0.5);
+  color: rgba($text-dark, 0.6);
 }
 
 @media (min-width: $tablet-width) {
@@ -166,11 +170,16 @@
   .brands__item {
     margin-bottom: 20px;
 
-    &::before {
-      width: 12px;
-      height: 12px;
-      top: calc(50% - 12px / 2);
-      left: -22px;
+   &::before {
+      width: 20px;
+      height: 20px;
+      top: calc(50% - 20px / 2);
+      left: -25px;
+      background-size: 20px 20px;
+    }
+
+    &:last-of-type {
+      margin-bottom: 20px;
     }
   }
 
@@ -214,6 +223,18 @@
 
   .brands__item {
     margin-bottom: 15px;
+
+    &::before {
+      width: 25px;
+      height: 25px;
+      top: 5px;
+      left: -35px;
+      background-size: 25px 25px;
+     }
+
+     &:last-of-type {
+       margin-bottom: 15px;
+     }
   }
 
   .brands__link {
@@ -253,8 +274,16 @@
     margin-bottom: 20px;
 
     &::before {
-      left: -22px;
-    }
+      width: 30px;
+      height: 30px;
+      top: 0px;
+      left: -40px;
+      background-size: 30px 30px;
+     }
+
+     &:last-of-type {
+       margin-bottom: 20px;
+     }
   }
 
 }
