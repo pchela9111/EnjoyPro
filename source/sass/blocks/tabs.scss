@@ -1,33 +1,18 @@
 .tabs {
   width: 100%;
-  div {
-  	box-sizing: border-box;
-  	transition: all ease-in-out .5s;
-  }
 }
 
-
-
-.tabs__btn {
-  border: 2px solid $secondary;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-	display: inline-block;
-
-	cursor: pointer;
-}
-
-.tabs__menu {
+.tabs__nav {
   display: flex;
   justify-content: space-between;
+  border-bottom: 2px solid $secondary;
 }
 
 .tabs__btn {
-
-  border: 2px solid #544951;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-
+  width: 50%;
+  background-color: $background-light;
+  border: 2px solid $primary-light;
+  border-radius: 10px 10px 0 0;
   padding: 10px 19px;
   font-size: 1.8rem;
   line-height: 1.2;
@@ -37,51 +22,57 @@
 	cursor: pointer;
 }
 
+.tabs__btn.is-active {
+  background-color: $primary-light;
+  border-right: 2px solid $secondary;
+  border-top: 2px solid $secondary;
+  border-left: 2px solid $secondary;
+
+}
+
 .tabs__desc {
-	overflow: hidden;
-	position: relative;
-  top: 5px;
+  position: relative;
+  background-color: $primary-light;
 }
 
 .tabs__content {
-	position: absolute;
-	left: 0;
-	top: 0;
-	background: #ECF0F3;
-	width: 100%;
-	transform: translateY(-100%);
-  padding: 15px 20px 20px 20px;
-  border-radius: 0 0 20px 20px;
-
-  &--height {
-    min-height: 400px;
-  }
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: opacity 500ms ease;
+  padding: 20px 20px 25px 25px;
+  border-top: 2px solid $background-light;
+  box-sizing: border-box;
 }
 
-.tabs__content:first-child {
-	position: relative;
-}
-.tabs__content.tabs__content--active {
-	display: block;
-	transform: translateY(0%);
+.tabs__content.is-active {
+  opacity: 1;
+  background-color: $primary-light;
 }
 
-.tabs__btn--current {
-  background-color:  #ECF0F3;
-  border: 1px solid #ECF0F3;
-	border-bottom: 1px solid #544951;
-}
 
+.tabs__inner {
+  height: 100%;
+}
 .tabs__text {
+  width: 100%;
   font-size: 1.6rem;
   line-height: 1.2;
   color: $text-darkness;
   text-align: left;
+
+  &--indent {
+    margin-bottom: 10px;
+
+  }
 }
 
 .tabs__list {
   display: flex;
   flex-direction: column;
+  padding-top: 10px;
   padding-left: 25px;
   margin-bottom: 10px;
 }
@@ -98,6 +89,25 @@
     border-radius: 50px;
     background-color: $accent;
     top: 5px;
-    left: -20px;
+    left: -25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .tabs__btn {
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+
+  .tabs__content {
+    padding-bottom: 30px;
+  }
+
+  .tabs__list {
+    margin-bottom: 20px;
+  }
+
+  .tabs__text {
+    font-size: 1.8rem;
   }
 }

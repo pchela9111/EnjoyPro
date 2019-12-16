@@ -160,8 +160,69 @@
               <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
             <button class="button  button--base  button--cards" type="button">Заказать</button>
-            <button class="cards__btn  modal--open-js" type="button">Подробнее</button>
+            <button class="cards__btn  modal--open-js" type="button" data-modal="1">Подробнее</button>
+            <!-- всплывающие окна для продуктовых карточек -->
+            <div class="modal">
 
+            </div>
+            <div class="modal  cards__modal" data-modal="1">
+              <h2 class="visually-hidden">Подробное описание товара</h2>
+              <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+              <h3 class="cards__title">Ручка-замок для распашной двери холодильной камеры MTH <br />(13022, 13023, 15040)</h3>
+              <div class="cards__inner">
+                <div class="cards__img  cards__img--modal">
+                  <picture>
+                    <source media="(min-width:768px)" srcset="img/handle-lock-product-modal-tablet@1x.jpg 1x, img/handle-lock-product-tablet@2x.jpg 2x">
+                    <img src="img/handle-lock-product-mobile@1x.jpg" srcset="img/handle-lock-product-mobile@2x.jpg 2x" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
+                  </picture>
+                </div>
+                <table class="cards__table">
+                  <tr class="cards__row">
+                    <td class="cards__col">Код товара:</td>
+                    <td class="cards__col">5726</td>
+                  </tr>
+                  <tr class="cards__row">
+                    <td class="cards__col">Производитель:</td>
+                    <td class="cards__col">MTH</td>
+                  </tr>
+                  <tr class="cards__row">
+                    <td class="cards__col">Страна производитель:</td>
+                    <td class="cards__col">Италия</td>
+                  </tr>
+                  <tr class="cards__row">
+                    <td class="cards__col">Гарантия:</td>
+                    <td class="cards__col">12 мес</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="cards__box">
+                <p class="cards__price">4 647 <span>руб</span></p>
+                <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              </div>
+              <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
+              <button class="button  button--arrow-right  button--base  button--call" type="button">Заказать звонок</button>
+              <div class="tabs">
+                <div class="tabs__nav">
+                  <div class="tabs__btn" data-tab-name="tab-1">Описание</div>
+                  <div class="tabs__btn  is-active" data-tab-name="tab-2">Доставка</div>
+                </div>
+                <div class="tabs__desc">
+                  <div class="tabs__content tab-1">
+                    <p class="tabs__text  tabs__text--indent">Ручка-замок MTH состоит из двух частей: наружной и внутренней. Детали ручки изготовлены из жёсткого ударопрочного пластика.</p>
+                    <p class="tabs__text">
+                    В наружной части есть рычаг для открывания двери и замок с двумя ключами, во внутренней части &mdash; рычаг аварийного открывания двери (открывается при закрытом замке). Части соединяются двумя болтами (входят в комплект) через три отверстия в полотне двери.</p></div>
+                  <div class="tabs__content is-active tab-2">
+                    <ul class="tabs__list">
+                      <li class="tabs__item"><p class="tabs__text">Доставка осуществляется по Москве и регионам России.</p></li>
+                      <li class="tabs__item"><p class="tabs__text">Доставка по Москве в пределах МКАД &mdash; 500 рублей. <br />Есть пункты самовывоза.</p></li>
+                      <li class="tabs__item"><p class="tabs__text">Московская область — 500 руб + за 1км 30 рублей.</p></li>
+                      <li class="tabs__item"><p class="tabs__text">В регионы доставка осуществляется транспортной компанией по Вашему выбору.</p></li>
+                    </ul>
+                    <button class="button  button--arrow-down  button--lightest  button--delivery" type="button">Подробнее <span>о доставке</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
 
           </li>
           <li class="cards__item">
@@ -179,6 +240,7 @@
             </div>
             <button class="button  button--base  button--cards" type="button">Заказать</button>
             <button class="cards__btn" type="button" aria-label="Открыть/закрыть  подробное описание товара">Подробнее</button>
+
           </li>
           <li class="cards__item">
             <div class="cards__img">
@@ -213,67 +275,16 @@
             <button class="cards__btn" type="button" aria-label="Открыть/закрыть  подробное описание товара">Подробнее</button>
           </li>
         </ul>
+
       </div>
     </section>
   </main>
   <footer class="footer-main"></footer>
+  <!-- Форма для заказа звонка -->
 
-<!-- всплывающие окна для продуктовых карточек -->
-  <div class="modal  cards__modal  active" data-modal="1">
-    <h2 class="visually-hidden">Подробное описание товара</h2>
-    <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
-    <h3 class="cards__title">Ручка-замок для распашной двери холодильной камеры MTH <br />(13022, 13023, 15040)</h3>
-    <div class="cards__img  cards__img--modal">
-      <picture>
-        <source media="(min-width:768px)" srcset="img/handle-lock-product-tablet@1x.jpg 1x, img/handle-lock-product-tablet@2x.jpg 2x">
-        <img src="img/handle-lock-product-mobile@1x.jpg" srcset="img/handle-lock-product-mobile@2x.jpg 2x" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
-      </picture>
-    </div>
-    <table class="cards__table">
-      <tr class="cards__row">
-        <td class="cards__col">Код товара:</td>
-        <td class="cards__col">5726</td>
-      </tr>
-      <tr class="cards__row">
-        <td class="cards__col">Производитель:</td>
-        <td class="cards__col">MTH</td>
-      </tr>
-      <tr class="cards__row">
-        <td class="cards__col">Страна производитель:</td>
-        <td class="cards__col">Италия</td>
-      </tr>
-      <tr class="cards__row">
-        <td class="cards__col">Гарантия:</td>
-        <td class="cards__col">12 мес</td>
-      </tr>
-    </table>
-    <div class="cards__holder  cards__holder--modal">
-      <p class="cards__price">4 647 <span>руб</span></p>
-      <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-    </div>
-    <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
-    <button class="button  button--arrow-right  button--base  button--call" type="button">Заказать звонок</button>
-    <div class="tabs">
-      <div class="tabs__menu">
-        <div class="tabs__btn  tabs__btn--current">Описание</div>
-        <div class="tabs__btn">Доставка</div>
-      </div>
-      <div class="tabs__desc">
-        <div class="tabs__content  tabs__content--active"><p class="tabs__text">Ручка-замок MTH состоит из двух частей: наружной и внутренней. Детали ручки изготовлены из жёсткого ударопрочного пластика. В наружной части есть рычаг для открывания двери и замок с двумя ключами, во внутренней части - рычаг аварийного открывания двери (открывается при закрытом замке). Части соединяются двумя болтами (входят в комплект) через три отверстия в полотне двери.</p></div>
-        <div class="tabs__content  tabs__content--height">
-          <ul class="tabs__list">
-            <li class="tabs__item"><p class="tabs__text">Доставка осуществляется по Москве и регионам России.</p></li>
-            <li class="tabs__item"><p class="tabs__text">Доставка по Москве в пределах МКАД &mdash; 500 рублей. <br />Есть пункты самовывоза.</p></li>
-            <li class="tabs__item"><p class="tabs__text">Московская область — 500 руб + за 1км 30 рублей.</p></li>
-            <li class="tabs__item"><p class="tabs__text">В регионы доставка осуществляется транспортной компанией по Вашему выбору.</p></li>
-          </ul>
-          <button class="button  button--arrow-down  button--lightest  button--delivery" type="button">Подробнее о доставке</button>
-        </div>
-      </div>
-    </div>
-  </div>
+
   <!-- Подложка под модальным окном -->
-  <div class="modal__overlay  modal__overlay--js  active"></div>
+  <div class="modal__overlay  modal--overlay-js"></div>
   <!-- partial -->
   <script src="js/script.js"></script>
 </body>
