@@ -101,13 +101,22 @@
 
   &--lightest {
     position: relative;
-    width: 280px;
     position: relative;
     height: 60px;
     font-size: 1.6rem;
     color: $text-dark;
     background-color: $background-light;
     padding: 20px 30px;
+
+    &:hover,
+    &:focus {
+      background-color: $accent;
+      border: 1px solid $primary-light;
+    }
+
+    &:active {
+      color: rgba($text-dark, 0.3%);
+    }
   }
 
   &--nav {
@@ -151,6 +160,20 @@
     font-size: 1.6rem;
     margin-bottom: 25px;
   }
+
+  &--delivery {
+    width: 209px;
+    text-align: left;
+    font-size: 1.6rem;
+    padding: 20px 40px;
+    margin-right: auto;
+    margin-left: auto;
+
+    span {
+      display: none;
+    }
+  }
+
 }
 
 @media (min-width: $tablet-width) {
@@ -161,6 +184,35 @@
 
   .button--cards {
     margin-bottom: 30px;
+  }
+
+  .button--cart {
+    width: 307px;
+    font-size: 1.8rem;
+    text-align: left;
+    padding: 20px 35px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+  }
+
+  .button--call {
+    width: 307px;
+    padding: 20px 35px;
+    font-size: 1.8rem;
+    margin-left: 40px;
+    margin-bottom: 45px;
+  }
+
+  .button--delivery {
+    height: 50px;
+    width: 316px;
+    padding: 15px 40px;
+    margin-left: 20px;
+
+    span {
+      display: inline-block;
+    }
+
   }
 
 }

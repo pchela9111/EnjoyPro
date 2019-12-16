@@ -21,6 +21,8 @@ navToggle.addEventListener("click", function(evt) {
   }
 });
 
+//выпадающее меню для каталога
+
 if (document.querySelector('.catalog__filter-menu')) {
   var sortingLink = document.querySelector('.catalog__btn');
   var sortingPopup = document.querySelector('.catalog__filter-menu');
@@ -43,21 +45,105 @@ if (document.querySelector('.catalog__brands-menu')) {
   });
 }
 
-var tabs = document.querySelector('.tabs__menu').children;
-var tabcontents = document.querySelector('.tabs__desc').children;
+//вкладки в подробном описании продуктовой карточки
+let tab = function () {
+    let tabNav = document.querySelectorAll('.tabs__btn'),
+        tabContent = document.querySelectorAll('.tabs__content'),
+        tabName;
 
-var myFunction = function() {
-	var tabchange = this.mynum;
-	for(var int=0;int<tabcontents.length;int++){
-		tabcontents[int].className = ' tabs__content';
-		tabs[int].className = ' tabs__btn';
-	}
-	tabcontents[tabchange].classList.add('tabs__content--active');
-	this.classList.add('tabs__btn--current');
-}
+    tabNav.forEach(item => {
+        item.addEventListener('click', selectTabNav)
+    });
+
+    function selectTabNav() {
+        tabNav.forEach(item => {
+            item.classList.remove('is-active');
+        });
+        this.classList.add('is-active');
+        tabName = this.getAttribute('data-tab-name');
+        selectTabContent(tabName);
+    }
+
+    function selectTabContent(tabName) {
+        tabContent.forEach(item => {
+            item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
+        })
+    }
+
+};
 
 
-for(var index=0;index<tabs.length;index++){
-	tabs[index].mynum=index;
-	tabs[index].addEventListener('click', myFunction, false);
-}
+tab();
+
+//множество модальных окон
+
+!function(e){"function"!=typeof e.matches&&(e.matches=e.msMatchesSelector||e.mozMatchesSelector||e.webkitMatchesSelector||function(e){for(var t=this,o=(t.document||t.ownerDocument).querySelectorAll(e),n=0;o[n]&&o[n]!==t;)++n;return Boolean(o[n])}),"function"!=typeof e.closest&&(e.closest=function(e){for(var t=this;t&&1===t.nodeType;){if(t.matches(e))return t;t=t.parentNode}return null})}(window.Element.prototype);
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+   /* Записываем в переменные массив элементов-кнопок и подложку.
+      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
+   var modalButtons = document.querySelectorAll('.modal--open-js'),
+       overlay      = document.querySelector('.modal--overlay-js'),
+       closeButtons = document.querySelectorAll('.modal--close-js');
+
+
+   /* Перебираем массив кнопок */
+   modalButtons.forEach(function(item){
+
+      /* Назначаем каждой кнопке обработчик клика */
+      item.addEventListener('click', function(e) {
+
+         /* Предотвращаем стандартное действие элемента. Так как кнопку разные
+            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
+            Нужно подстраховаться. */
+         e.preventDefault();
+
+         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
+            и будем искать модальное окно с таким же атрибутом. */
+         var modalId = this.getAttribute('data-modal'),
+             modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
+
+
+         /* После того как нашли нужное модальное окно, добавим классы
+            подложке и окну чтобы показать их. */
+         modalElem.classList.add('active');
+         overlay.classList.add('active');
+      }); // end click
+
+   }); // end foreach
+
+
+   closeButtons.forEach(function(item){
+
+      item.addEventListener('click', function(e) {
+         var parentModal = this.closest('.modal');
+
+         parentModal.classList.remove('active');
+         overlay.classList.remove('active');
+      });
+
+   }); // end foreach
+
+
+    document.body.addEventListener('keyup', function (e) {
+        var key = e.keyCode;
+
+        if (key == 27) {
+
+            document.querySelector('.modal.active').classList.remove('active');
+            document.querySelector('.modal__overlay').classList.remove('active');
+        };
+    }, false);
+
+
+    overlay.addEventListener('click', function() {
+        document.querySelector('.modal.active').classList.remove('active');
+        this.classList.remove('active');
+    });
+
+
+
+
+}); // end ready
