@@ -1,0 +1,97 @@
+.form {
+  width: 280px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding-top: 30px;
+  padding-bottom: 20px;
+  background-color: $primary-light;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px 10px rgba(0, 0, 0, 0.2);
+
+}
+
+.form__list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  padding: 20px;
+}
+
+.form__item {
+  margin-bottom: 20px;
+}
+
+.form__label {
+  position: relative;
+  display: block;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  color: $text-darkness;
+}
+
+.form__input {
+  width: 240px;
+  display: block;
+  box-sizing: border-box;
+  padding: 10px 14px 7px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+
+  border: none;
+  border-bottom: 1px solid $secondary-darkness;
+  background-color: transparent;
+  transition: all 80ms;
+  &::placeholder {
+    color: rgba(84, 73, 81, 0.5);
+  }
+
+  &:hover {
+    border-bottom: 1px solid $accent;
+  }
+  &:focus {
+    &::placeholder {
+      color: rgba(84, 73, 81, 0.9);
+    }
+  }
+}
+
+.form__text {
+  width: 240px;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  color: $text-darkness;
+  text-transform: uppercase;
+  margin-right: auto;
+  margin-left: auto;
+  margin-bottom: 15px;
+
+
+  &--radio {
+    width: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form {
+    width: 330px;
+  }
+
+  .form__list {
+    padding: 20px 35px;
+  }
+
+  .form__input {
+    width: 255px;
+  }
+}

@@ -96,7 +96,6 @@
     &:active {
       color: rgba($text-dark, 0.3%);
     }
-
   }
 
   &--lightest {
@@ -166,12 +165,21 @@
     text-align: left;
     font-size: 1.6rem;
     padding: 20px 40px;
+    background-color: $primary-light;
     margin-right: auto;
     margin-left: auto;
 
     span {
       display: none;
     }
+  }
+
+  &--form {
+    width: 260px;
+    font-size: 1.8rem;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 25px;
   }
 
 }

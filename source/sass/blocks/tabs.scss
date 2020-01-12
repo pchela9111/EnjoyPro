@@ -19,7 +19,21 @@
 	margin: 0;
   color: $text-dark;
 	text-transform: uppercase;
+  transition: 180ms;
 	cursor: pointer;
+
+  &:hover,
+  &:focus {
+    color: $text-darkness;
+    border-right: 2px solid $secondary;
+    border-top: 2px solid $secondary;
+    border-left: 2px solid $secondary;
+  }
+
+  &:active {
+    background-color: $primary-light;
+    color: rgba($text-dark, 1);
+  }
 }
 
 .tabs__btn.is-active {
@@ -27,6 +41,11 @@
   border-right: 2px solid $secondary;
   border-top: 2px solid $secondary;
   border-left: 2px solid $secondary;
+
+  &:hover,
+  &:focus {
+    color: rgba($text-dark, 1);
+  }
 
 }
 
@@ -49,9 +68,7 @@
 
 .tabs__content.is-active {
   opacity: 1;
-  background-color: $primary-light;
 }
-
 
 .tabs__inner {
   height: 100%;
@@ -65,7 +82,6 @@
 
   &--indent {
     margin-bottom: 10px;
-
   }
 }
 
@@ -94,12 +110,19 @@
 }
 
 @media (min-width: $tablet-width) {
+
+  .tabs__nav {
+    margin-right: 40px;
+    margin-left: 40px;
+  }
+
   .tabs__btn {
     padding-top: 15px;
     padding-bottom: 15px;
   }
 
   .tabs__content {
+    padding-left: 45px;
     padding-bottom: 30px;
   }
 

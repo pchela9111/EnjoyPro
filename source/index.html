@@ -36,6 +36,7 @@
 <body>
   <svg style="display:none">
     <symbol id="icon-smile" viewBox="0 0 438.533 438.533"><path d="M409.132 109.205c-19.608-33.592-46.205-60.189-79.798-79.796C295.733 9.803 259.054.002 219.273.002c-39.781 0-76.47 9.801-110.063 29.407-33.595 19.604-60.192 46.201-79.8 79.796C9.801 142.802 0 179.491 0 219.269c0 39.78 9.804 76.463 29.407 110.062 19.607 33.592 46.204 60.189 79.799 79.798 33.597 19.603 70.283 29.403 110.063 29.403s76.47-9.801 110.065-29.403c33.593-19.608 60.189-46.206 79.795-79.798 19.603-33.599 29.403-70.284 29.403-110.062.001-39.782-9.8-76.472-29.4-110.064zm-21.699 181.01c-9.709 22.556-22.696 41.973-38.969 58.245-16.271 16.269-35.689 29.26-58.245 38.965-22.555 9.712-46.202 14.564-70.946 14.564s-48.391-4.859-70.948-14.564c-22.554-9.705-41.971-22.696-58.245-38.965-16.269-16.275-29.259-35.687-38.97-58.245-9.707-22.552-14.562-46.206-14.562-70.946 0-24.744 4.854-48.391 14.562-70.948 9.707-22.554 22.697-41.968 38.97-58.245 16.274-16.269 35.691-29.26 58.245-38.97 22.554-9.704 46.205-14.558 70.948-14.558 24.74 0 48.395 4.851 70.946 14.558 22.556 9.707 41.97 22.698 58.245 38.97 16.272 16.274 29.26 35.688 38.969 58.245 9.709 22.554 14.564 46.201 14.564 70.948.004 24.744-4.855 48.397-14.564 70.946z"/><path d="M312.06 247.533c-4.757-1.532-9.418-1.136-13.99 1.144s-7.617 5.899-9.13 10.849c-4.754 15.229-13.562 27.555-26.412 36.973-12.844 9.421-27.265 14.134-43.255 14.134-15.986 0-30.402-4.716-43.252-14.134-12.847-9.421-21.65-21.744-26.409-36.973-1.521-4.949-4.521-8.569-8.992-10.849-4.473-2.279-9.087-2.676-13.846-1.144-4.949 1.52-8.564 4.518-10.85 8.987-2.284 4.469-2.666 9.096-1.141 13.846 7.039 23.038 20.173 41.593 39.397 55.679 19.226 14.086 40.924 21.121 65.096 21.121 24.169 0 45.873-7.035 65.098-21.121 19.212-14.093 32.347-32.641 39.389-55.679 1.533-4.75 1.15-9.377-1.136-13.846-2.293-4.469-5.817-7.459-10.567-8.987zM146.181 182.727c10.085 0 18.699-3.576 25.837-10.709 7.139-7.135 10.708-15.749 10.708-25.837 0-10.089-3.569-18.699-10.708-25.837s-15.752-10.709-25.837-10.709c-10.088 0-18.702 3.571-25.84 10.709-7.135 7.139-10.707 15.749-10.707 25.837s3.568 18.702 10.707 25.837c7.141 7.136 15.751 10.709 25.84 10.709zM292.359 109.633c-10.089 0-18.706 3.571-25.845 10.709-7.132 7.139-10.708 15.749-10.708 25.837s3.576 18.702 10.708 25.837c7.139 7.137 15.756 10.709 25.845 10.709 10.081 0 18.698-3.576 25.837-10.709 7.139-7.135 10.708-15.749 10.708-25.837 0-10.089-3.569-18.699-10.708-25.837s-15.756-10.709-25.837-10.709z"/></symbol>
+    <symbol id="icon-view" viewBox="0 0 511.999 511.999"><path d="M508.745 246.041c-4.574-6.257-113.557-153.206-252.748-153.206S7.818 239.784 3.249 246.035a16.896 16.896 0 000 19.923c4.569 6.257 113.557 153.206 252.748 153.206s248.174-146.95 252.748-153.201a16.875 16.875 0 000-19.922zM255.997 385.406c-102.529 0-191.33-97.533-217.617-129.418 26.253-31.913 114.868-129.395 217.617-129.395 102.524 0 191.319 97.516 217.617 129.418-26.253 31.912-114.868 129.395-217.617 129.395z"/><path d="M255.997 154.725c-55.842 0-101.275 45.433-101.275 101.275s45.433 101.275 101.275 101.275S357.272 311.842 357.272 256s-45.433-101.275-101.275-101.275zm0 168.791c-37.23 0-67.516-30.287-67.516-67.516s30.287-67.516 67.516-67.516 67.516 30.287 67.516 67.516-30.286 67.516-67.516 67.516z"/></symbol>
   </svg>
   <header class="header-main">
   <div class="header-main__bg">
@@ -121,7 +122,7 @@
         </div>
       </div>
     </section>
-    <section class="catalog">
+    <section class="catalog" id="catalog">
       <h2 class="visually-hidden">Продукция компании "EnjoyPro".</h2>
       <div class="catalog__container">
         <h3 class="catalog__title">Каталог</h3>
@@ -157,14 +158,90 @@
             <p class="cards__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
             <div class="cards__holder">
               <p class="cards__price">4 647 <span>руб</span></p>
-              <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              <p class="shared  shared__smile">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
             <button class="button  button--base  button--cards" type="button">Заказать</button>
-            <button class="cards__btn  modal--open-js" type="button" data-modal="1">Подробнее</button>
-            <!-- всплывающие окна для продуктовых карточек -->
-            <div class="modal">
-
+            <button class="shared  shared__btn shared__btn--cards  modal--open-js" type="button" data-modal="1" aria-label="Открыть/закрыть  подробное описание товара">Подробнее <svg class="shared__svg  shared__svg--view" width="32" height="32"><use xlink:href="#icon-view"></use></svg></button>
+            <!-- всплывающие окна для продуктовых карточек. Подробное описание -->
+            <div class="modal" data-modal="1">
+              <div class="cards__wrap">
+                <div class="cards__modal">
+                  <h2 class="visually-hidden">Подробное описание товара</h2>
+                  <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+                  <h3 class="cards__title">Ручка-замок для распашной двери холодильной камеры MTH <br />(13022, 13023, 15040)</h3>
+                  <div class="cards__inner">
+                    <div class="cards__img  cards__img--modal">
+                      <picture>
+                        <source media="(min-width:768px)" srcset="img/handle-lock-product-modal-tablet@1x.jpg 1x, img/handle-lock-product-tablet@2x.jpg 2x">
+                        <img src="img/handle-lock-product-mobile@1x.jpg" srcset="img/handle-lock-product-mobile@2x.jpg 2x" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
+                      </picture>
+                    </div>
+                    <table class="cards__table">
+                      <tr class="cards__row">
+                        <td class="cards__col">Код товара:</td>
+                        <td class="cards__col">5726</td>
+                      </tr>
+                      <tr class="cards__row">
+                        <td class="cards__col">Производитель:</td>
+                        <td class="cards__col">MTH</td>
+                      </tr>
+                      <tr class="cards__row">
+                        <td class="cards__col">Страна производитель:</td>
+                        <td class="cards__col">Италия</td>
+                      </tr>
+                      <tr class="cards__row">
+                        <td class="cards__col">Гарантия:</td>
+                        <td class="cards__col">12 мес</td>
+                      </tr>
+                    </table>
+                  </div>
+                  <div class="cards__box">
+                    <p class="cards__price">4 647 <span>руб</span></p>
+                    <p class="shared  shared__smile  shared__smile--cards">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--small" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+                  </div>
+                  <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
+                  <button class="button  button--arrow-right  button--base  button--call  modal--open-js" type="button"  data-modal="2">Заказать звонок</button>
+                  <div class="tabs">
+                    <div class="tabs__nav">
+                      <button class="tabs__btn  is-active" type="button" data-tab-name="tab-1">Описание</button>
+                      <div class="tabs__btn" data-tab-name="tab-2">Доставка</div>
+                    </div>
+                    <div class="tabs__desc">
+                      <div class="tabs__content is-active tab-1">
+                        <p class="tabs__text  tabs__text--indent">Ручка-замок MTH состоит из двух частей: наружной и внутренней. Детали ручки изготовлены из жёсткого ударопрочного пластика.</p>
+                        <p class="tabs__text">
+                        В наружной части есть рычаг для открывания двери и замок с двумя ключами, во внутренней части &mdash; рычаг аварийного открывания двери (открывается при закрытом замке). Части соединяются двумя болтами (входят в комплект) через три отверстия в полотне двери.</p></div>
+                      <div class="tabs__content  tab-2">
+                        <ul class="tabs__list">
+                          <li class="tabs__item"><p class="tabs__text">Доставка осуществляется по Москве и регионам России.</p></li>
+                          <li class="tabs__item"><p class="tabs__text">Доставка по Москве в пределах МКАД &mdash; 500 рублей. <br />Есть пункты самовывоза.</p></li>
+                          <li class="tabs__item"><p class="tabs__text">Московская область — 500 руб + за 1км 30 рублей.</p></li>
+                          <li class="tabs__item"><p class="tabs__text">В регионы доставка осуществляется транспортной компанией по Вашему выбору.</p></li>
+                        </ul>
+                        <button class="button  button--arrow-down  button--lightest  button--delivery" type="button">Подробнее <span>о доставке</span></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
+          </li>
+          <li class="cards__item">
+            <div class="cards__img">
+              <picture>
+                <source media="(min-width:1440px)" srcset="img/handle-lock-product-desktop@1x.jpg 1x, img/handle-lock-product-desktop@2x.jpg 2x">
+                <source media="(min-width:768px)" srcset="img/handle-lock-product-tablet@1x.jpg 1x, img/handle-lock-product-tablet@2x.jpg 2x">
+                <img src="img/handle-lock-product-mobile@1x.jpg" srcset="img/handle-lock-product-mobile@2x.jpg 2x" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
+              </picture>
+            </div>
+            <p class="cards__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
+            <div class="cards__holder">
+              <p class="cards__price">4 647 <span>руб</span></p>
+              <p class="shared  shared__smile">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+            </div>
+            <button class="button  button--base  button--cards" type="button">Заказать</button>
+            <button class="shared  shared__btn shared__btn--cards  modal--open-js" type="button" data-modal="1" aria-label="Открыть/закрыть  подробное описание товара">Подробнее <svg class="shared__svg  shared__svg--view" width="32" height="32"><use xlink:href="#icon-view"></use></svg></button>
+            <!-- всплывающие окна для продуктовых карточек -->
             <div class="modal  cards__modal" data-modal="1">
               <h2 class="visually-hidden">Подробное описание товара</h2>
               <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
@@ -196,22 +273,22 @@
                 </table>
               </div>
               <div class="cards__box">
-                <p class="cards__price">4 647 <span>руб</span></p>
-                <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+                <p class="cards__price">4 647 <span>р</span></p>
+                <p class="shared  shared__smile">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
               </div>
               <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
               <button class="button  button--arrow-right  button--base  button--call" type="button">Заказать звонок</button>
               <div class="tabs">
                 <div class="tabs__nav">
-                  <div class="tabs__btn" data-tab-name="tab-1">Описание</div>
-                  <div class="tabs__btn  is-active" data-tab-name="tab-2">Доставка</div>
+                  <div class="tabs__btn  is-active" data-tab-name="tab-1">Описание</div>
+                  <div class="tabs__btn" data-tab-name="tab-2">Доставка</div>
                 </div>
                 <div class="tabs__desc">
-                  <div class="tabs__content tab-1">
+                  <div class="tabs__content is-active tab-1">
                     <p class="tabs__text  tabs__text--indent">Ручка-замок MTH состоит из двух частей: наружной и внутренней. Детали ручки изготовлены из жёсткого ударопрочного пластика.</p>
                     <p class="tabs__text">
                     В наружной части есть рычаг для открывания двери и замок с двумя ключами, во внутренней части &mdash; рычаг аварийного открывания двери (открывается при закрытом замке). Части соединяются двумя болтами (входят в комплект) через три отверстия в полотне двери.</p></div>
-                  <div class="tabs__content is-active tab-2">
+                  <div class="tabs__content  tab-2">
                     <ul class="tabs__list">
                       <li class="tabs__item"><p class="tabs__text">Доставка осуществляется по Москве и регионам России.</p></li>
                       <li class="tabs__item"><p class="tabs__text">Доставка по Москве в пределах МКАД &mdash; 500 рублей. <br />Есть пункты самовывоза.</p></li>
@@ -223,7 +300,6 @@
                 </div>
               </div>
             </div>
-
           </li>
           <li class="cards__item">
             <div class="cards__img">
@@ -236,11 +312,10 @@
             <p class="cards__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
             <div class="cards__holder">
               <p class="cards__price">4 647 <span>руб</span></p>
-              <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              <p class="shared  shared__smile">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
             <button class="button  button--base  button--cards" type="button">Заказать</button>
-            <button class="cards__btn" type="button" aria-label="Открыть/закрыть  подробное описание товара">Подробнее</button>
-
+            <button class="shared  shared__btn shared__btn--cards  modal--open-js" type="button" data-modal="1" aria-label="Открыть/закрыть  подробное описание товара">Подробнее <svg class="shared__svg  shared__svg--view" width="32" height="32"><use xlink:href="#icon-view"></use></svg></button>
           </li>
           <li class="cards__item">
             <div class="cards__img">
@@ -253,35 +328,307 @@
             <p class="cards__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
             <div class="cards__holder">
               <p class="cards__price">4 647 <span>руб</span></p>
-              <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              <p class="shared  shared__smile">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
             <button class="button  button--base  button--cards" type="button">Заказать</button>
-            <button class="cards__btn" type="button" aria-label="Открыть/закрыть  подробное описание товара">Подробнее</button>
-          </li>
-          <li class="cards__item">
-            <div class="cards__img">
-              <picture>
-                <source media="(min-width:1440px)" srcset="img/handle-lock-product-desktop@1x.jpg 1x, img/handle-lock-product-desktop@2x.jpg 2x">
-                <source media="(min-width:768px)" srcset="img/handle-lock-product-tablet@1x.jpg 1x, img/handle-lock-product-tablet@2x.jpg 2x">
-                <img src="img/handle-lock-product-mobile@1x.jpg" srcset="img/handle-lock-product-mobile@2x.jpg 2x" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
-              </picture>
-            </div>
-            <p class="cards__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
-            <div class="cards__holder">
-              <p class="cards__price">4 647 <span>руб</span></p>
-              <p class="cards__text">Наличие в Москве <svg class="cards__svg" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-            </div>
-            <button class="button  button--base  button--cards" type="button">Заказать</button>
-            <button class="cards__btn" type="button" aria-label="Открыть/закрыть  подробное описание товара">Подробнее</button>
+            <button class="shared  shared__btn shared__btn--cards  modal--open-js" type="button" data-modal="1" aria-label="Открыть/закрыть  подробное описание товара">Подробнее <svg class="shared__svg  shared__svg--view" width="32" height="32"><use xlink:href="#icon-view"></use></svg></button>
           </li>
         </ul>
-
       </div>
     </section>
   </main>
   <footer class="footer-main"></footer>
   <!-- Форма для заказа звонка -->
+  <div class="modal"  data-modal="2">
+    <form class="form" action="#" method="post">
+      <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+      <ul class="form__list">
+        <li class="form__item">
+          <label class="form__label" for="name">Имя*</label>
+          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+        </li>
+        <li class="form__item">
+          <label class="form__label" for="phone">Телефон*</label>
+          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+        </li>
+        <li class="form__item">
+          <label class="form__label" for="email">Email</label>
+          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+        </li>
+      </ul>
+      <button class="button  button--base  button--form" type="submit">Заказать звонок</button>
+      <p class="form__text">Нажимая на кнопку &laquo;Заказать звонок&raquo;, я&nbsp;даю свое согласие на обработку моих персональных данных</p>
+      <label class="form__text  form__text--radio">
+        <input type="radio" name="approval" value="Согласен / Согласна" checked> Согласен / Согласна
+      </label>
+      <button class="shared  shared__btn shared__btn--form  modal--open-js" type="button" data-modal="1" aria-label="Открыть/закрыть  подробное описание товара">Подробнее <svg class="shared__svg  shared__svg--view" width="32" height="32"><use xlink:href="#icon-view"></use></svg></button>
+    </form>
+  </div>
 
+  <!-- корзина -->
+  <!--<div class="modal  data-modal="4">-->
+    <section class="cart">
+      <div class="cart__wrap">
+        <button class="modal__toggle  modal__toggle--cart modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+        <h2 class="cart__title">Моя корзина</h2>
+        <b class="cart__subhead">Мой заказ</b>
+        <div class="cart__table">
+          <div class="cart__row  cart__row--title">
+            <div class="cart__col">Товар</div>
+            <div class="cart__col">Кол-во</div>
+            <div class="cart__col">Цена</div>
+          </div>
+          <div class="cart__content">
+            <div class="cart__row">
+              <div class="cart__col  cart__col--img">
+                <div class="cart__img">
+                  <img src="img/handle-lock-product-cart@1x.jpg" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
+                </div>
+                <p class="cart__price">4 647 <span>р</span></p>
+              </div>
+              <div class="cart__col  cart__col--name">
+                <p class="cart__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
+                <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
+                <p class="cart__text  cart__text--small">код товара: 5726</p>
+              </div>
+              <div class="cart__col  cart__col--smile">
+                <p class="shared  shared__smile  shared__smile--cart">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              </div>
+              <div class="cart__col  cart__col--counter">
+                <span class="cart__counter">
+                  <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+                  <input class="cart__input" type="text" name="number" value="" placeholder="2">
+                  <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+                </span>
+              </div>
+              <div class="cart__col  cart__col--price">
+                <p class="cart__price  cart__price--amount">9 294 <span>р</span></p>
+              </div>
+              <div class="cart__col  cart__col--delete">
+                <p class="cart__delete">удалить</p>
+                <button class="cart__toggle" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+              </div>
+            </div>
+          </div>
+          <div class="cart__content">
+            <div class="cart__row">
+              <div class="cart__col  cart__col--img">
+                <div class="cart__img">
+                  <img src="img/loop-product-cart@1x.jpg" alt="Петля МТН 14028 для распашной двери холодильной камеры">
+                </div>
+                <p class="cart__price">1 127 <span>р</span></p>
+              </div>
+              <div class="cart__col  cart__col--name">
+                <p class="cart__name">Петля МТН 14028 для распашной двери холодильной камеры</p>
+                <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
+                <p class="cart__text  cart__text--small">код товара: 10739</p>
+              </div>
+              <div class="cart__col  cart__col--smile">
+                <p class="shared  shared__smile  shared__smile--cart">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
+              </div>
+              <div class="cart__col  cart__col--counter">
+                <span class="cart__counter">
+                  <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+                  <input class="cart__input" type="text" name="number" value="" placeholder="1">
+                  <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+                </span>
+              </div>
+              <div class="cart__col  cart__col--price">
+                <p class="cart__price  cart__price--amount">1 127 <span>р</span></p>
+              </div>
+              <div class="cart__col  cart__col--delete">
+                <p class="cart__delete">удалить</p>
+                <button class="cart__toggle" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+              </div>
+            </div>
+            <div class="cart__row  cart__row--total">
+              <div class="cart__col  cart__col--total">
+                <p class="cart__total">Итого:</p>
+                <p class="cart__price  cart__price--total">10 421 <span>р</span></p>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <a class="cart__link" href="#catalog">Вернуться в каталог</a>
+      <form class="cart__delivery" action="#" method="post">
+        <fieldset class="cart__fieldset">
+          <legend class="cart__legend">Выбрать способ доставки:</legend>
+          <ul class="tabs__nav">
+            <li class="tabs__btn">
+              <label class="tabs__btn" for="btn-1">Самовывоз</label>
+              <input class="tabs__input" type="radio" id="btn-1" name="pickup" checked>
+            </li>
+            <li class="tabs__btn">
+              <label class="tabs__btn" for="btn-2">Доставка по Москве и МО</label>
+              <input class="tabs__input" type="radio" id="btn-2" name="delivery_in_moscow_and_mo">
+            </li>
+            <li class="tabs__btn">
+              <label class="tabs__btn" for="btn-3">Доставка транспортной компанией по РФ</label>
+              <input class="tabs__input" type="radio" id="btn-3" name="delivery_transport_company">
+            </li>
+          </ul>
+          <div class="tabs__desc">
+            <div class="tabs__content" id="tab-1">
+              <fieldset class="tabs__fieldset">
+                <legend class="tabs__legend">Пункты самовывоза:</legend>
+                <ul class="tabs__options">
+                  <li class="tabs__option">
+                    <label class="tabs__btn" for="metro-1">м. Красногвардейская</label>
+                    <input class="tabs__input" type="radio" id="metro-1" name="krasnogvardeyskaya" checked>
+                  </li>
+                  <li class="tabs__option">
+                    <label class="tabs__btn" for="metro-2">м. Планерная</label>
+                    <input class="tabs__input" type="radio" id="metro-2" name="planernaya">
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="tabs__fieldset">
+                <legend class="tabs__legend">Оформить заказ</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label" for="name">Имя*</label>
+                    <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="phone">Телефон*</label>
+                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="email">Email</label>
+                    <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+                  </li>
+                  <li class="form__item">
+                    <label class="visually-hidden">Оставьте комментарий
+                      <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+            <div class="tabs__content" id="tab-2">
+              <fieldset class="tabs__fieldset">
+                <legend class="visually-hidden">Доставка по Москве и МО</legend>
+                <ul class="tabs__nav">
+                  <li class="tabs__btn">
+                    <label class="tabs__btn" for="btn-4">Доставка по Москве в пределах МКАД</label>
+                    <input class="tabs__input" type="radio" id="btn-4" name="delivery_in_moscow_in_mkad" checked>
+                  </li>
+                  <li class="tabs__btn">
+                    <label class="tabs__btn" for="btn-5">Доставка по Москве за МКАД и по Московской области</label>
+                    <input class="tabs__input" type="radio" id="btn-5" name="delivery_moscow_region">
+                  </li>
+                </ul>
+                <div class="tabs__desc">
+                  <div class="tabs__content" id="tab-4">
+                    <p class="tabs__text">Стоимость доставки  по Москве в пределах МКАД — 500 рублей.</p>
+                    <fieldset class="tabs__fieldset">
+                      <legend class="tabs__legend">Оформить заказ</legend>
+                      <ul class="form__list">
+                        <li class="form__item">
+                          <label class="form__label" for="name">Имя*</label>
+                          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="phone">Телефон*</label>
+                          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="email">Email</label>
+                          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="address">Адрес*</label>
+                          <input class="form__input" type="text" name="address" id="address" placeholder="ул Поперника 8" required>
+                        </li>
+                        <li class="form__item">
+                          <label class="visually-hidden">Оставьте комментарий
+                            <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </div>
+                  <div class="tabs__content" id="tab-5">
+                    <p class="tabs__text">Стоимость доставки  по Москве за пределами МКАД и по Московской области — 500 рублей + 30 рублей за 1 км.</p>
+                    <fieldset class="tabs__fieldset">
+                      <legend class="tabs__legend">Оформить заказ</legend>
+                      <ul class="form__list">
+                        <li class="form__item">
+                          <label class="form__label" for="name">Имя*</label>
+                          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="phone">Телефон*</label>
+                          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="email">Email</label>
+                          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+                        </li>
+                        <li class="form__item">
+                          <label class="form__label" for="address">Адрес*</label>
+                          <textarea class="form__input" type="email" name="comment" placeholder="Ногинский р-н п Обухово ул Луговая 6" required></textarea>
+                        </li>
+                        <li class="form__item">
+                          <label class="visually-hidden">Оставьте комментарий
+                            <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                          </label>
+                        </li>
+                      </ul>
+                    </fieldset>
+                  </div>
+                </div>
+              </fieldset>
+            </div>
+            <div class="tabs__content" id="tab-3">
+              <h2 class="visually-hidden">Доставка транспортной компанией по РФ</h2>
+              <fieldset class="tabs__fieldset">
+                <legend class="tabs__legend">Оформить заказ</legend>
+                <ul class="form__list">
+                  <li class="form__item">
+                    <label class="form__label" for="name">Имя*</label>
+                    <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="phone">Телефон*</label>
+                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="email">Email</label>
+                    <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email" required>
+                  </li>
+                  <li class="form__item">
+                    <label class="form__label" for="destination">Пункт назначения*</label>
+                    <textarea class="form__input" type="destination" name="destination" placeholder="Краснодарский край г Анапа" required></textarea>
+                  </li>
+                  <li class="form__item">
+                    <label class="visually-hidden">Оставьте комментарий
+                      <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                    </label>
+                  </li>
+                </ul>
+              </fieldset>
+              <fieldset class="tabs__fieldset">
+                <legend class="tabs__legend">Нужна доставка по городу?</legend>
+                <ul class="tabs__options">
+                  <li class="tabs__option">
+                    <label class="tabs__btn" for="yes">Да</label>
+                    <input class="tabs__input" type="radio" id="yes" name="yes" checked>
+                  </li>
+                  <li class="tabs__option">
+                    <label class="tabs__btn" for="no">Нет. Заберу с терминала транспортной компании</label>
+                    <input class="tabs__input" type="radio" id="no" name="no_transport_company_terminal">
+                  </li>
+                </ul>
+              </fieldset>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      </div>
+    </section>
+<!--  </div>-->
 
   <!-- Подложка под модальным окном -->
   <div class="modal__overlay  modal--overlay-js"></div>

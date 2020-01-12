@@ -1,23 +1,23 @@
-"use strict";
+'use strict';
 
 //мобильное меню
-var navMain = document.querySelector(".nav-main");
-var navToggle = document.querySelector(".nav-main__toggle");
-var navLogo = document.querySelector(".nav-main__image");
+var navMain = document.querySelector('.nav-main');
+var navToggle = document.querySelector('.nav-main__toggle');
+var navLogo = document.querySelector('.nav-main__image');
 
-navMain.classList.remove("nav-main--nojs");
-navLogo.src = "img/ejpro-logo-white.svg";
+navMain.classList.remove('nav-main--nojs');
+navLogo.src = 'img/ejpro-logo-white.svg';
 
-navToggle.addEventListener("click", function(evt) {
-  if (navMain.classList.contains("nav-main--closed")) {
+navToggle.addEventListener('click', function(evt) {
+  if (navMain.classList.contains('nav-main--closed')) {
     evt.preventDefault();
-    navMain.classList.remove("nav-main--closed");
-    navMain.classList.add("nav-main--opened");
-    navLogo.src = "img/ejpro-logo-green.svg";
+    navMain.classList.remove('nav-main--closed');
+    navMain.classList.add('nav-main--opened');
+    navLogo.src = 'nav-main--opened';
   } else {
-    navMain.classList.add("nav-main--closed");
-    navMain.classList.remove("nav-main--opened");
-    navLogo.src = "img/ejpro-logo-white.svg";
+    navMain.classList.add('nav-main--closed');
+    navMain.classList.remove('nav-main--opened');
+    navLogo.src = 'img/ejpro-logo-white.svg';
   }
 });
 
@@ -69,7 +69,6 @@ let tab = function () {
             item.classList.contains(tabName) ? item.classList.add('is-active') : item.classList.remove('is-active');
         })
     }
-
 };
 
 
@@ -81,39 +80,19 @@ tab();
 
 
 document.addEventListener('DOMContentLoaded', function() {
-
-   /* Записываем в переменные массив элементов-кнопок и подложку.
-      Подложке зададим id, чтобы не влиять на другие элементы с классом overlay*/
    var modalButtons = document.querySelectorAll('.modal--open-js'),
        overlay      = document.querySelector('.modal--overlay-js'),
        closeButtons = document.querySelectorAll('.modal--close-js');
 
-
-   /* Перебираем массив кнопок */
    modalButtons.forEach(function(item){
-
-      /* Назначаем каждой кнопке обработчик клика */
       item.addEventListener('click', function(e) {
-
-         /* Предотвращаем стандартное действие элемента. Так как кнопку разные
-            люди могут сделать по-разному. Кто-то сделает ссылку, кто-то кнопку.
-            Нужно подстраховаться. */
          e.preventDefault();
-
-         /* При каждом клике на кнопку мы будем забирать содержимое атрибута data-modal
-            и будем искать модальное окно с таким же атрибутом. */
          var modalId = this.getAttribute('data-modal'),
              modalElem = document.querySelector('.modal[data-modal="' + modalId + '"]');
-
-
-         /* После того как нашли нужное модальное окно, добавим классы
-            подложке и окну чтобы показать их. */
          modalElem.classList.add('active');
          overlay.classList.add('active');
-      }); // end click
-
-   }); // end foreach
-
+      });
+   });
 
    closeButtons.forEach(function(item){
 
@@ -123,8 +102,7 @@ document.addEventListener('DOMContentLoaded', function() {
          parentModal.classList.remove('active');
          overlay.classList.remove('active');
       });
-
-   }); // end foreach
+   });
 
 
     document.body.addEventListener('keyup', function (e) {
@@ -140,10 +118,30 @@ document.addEventListener('DOMContentLoaded', function() {
 
     overlay.addEventListener('click', function() {
         document.querySelector('.modal.active').classList.remove('active');
+
         this.classList.remove('active');
     });
+});
+
+//форма заказа звонка/ Пока не работает
 
 
+if(document.querySelector('.popup-call')) {
+  var popup = document.querySelector('.popup-call');
+  var buttonOpen = document.querySelectorAll('.button--call');
+  var buttonClose = popup.querySelector('.popup-call__toggle');
 
-
-}); // end ready
+  // Popup "Товар добавлен в корзину"
+  for (i = 0; i < buttonOpen.length; i++) {
+      buttonOpen[i].addEventListener('click', function (event) {
+          event.preventDefault();
+          console.log('Отзовись!');
+          popup.classList.add('popup-call--show');
+      })
+  };
+  //закрытие попапа по Х
+  buttonClose.addEventListener('click', function (event) {
+      event.preventDefault();
+      popup.classList.remove('popup-call--show');
+  });
+}
