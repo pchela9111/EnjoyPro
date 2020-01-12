@@ -7,12 +7,13 @@
   position: relative;
   width: 100%;
   border: 1px solid $primary-light;
+  border: 1px solid red;
   box-sizing: border-box;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 25px;
+  padding-bottom: 5px;
   margin-bottom: 30px;
 
   &:hover {
@@ -32,6 +33,7 @@
   line-height: 1.2;
   font-weight: 400;
   color: $text-darkness;
+  color: red;
   text-transform: uppercase;
   text-align: center;
   margin-bottom: 20px;
@@ -66,18 +68,36 @@
   position: relative;
   padding: 0;
   margin: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   font-size: 1.4rem;
   line-height: 1.2;
   font-weight: 300;
   color: $text-darkness;
 }
 
+/*.cards__smile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $text-darkness;
+  color: red;
+
+  &--cart {
+    width: 57%;
+    margin-left: 10px;
+  }
+}
+
 .cards__svg {
   fill: $accent;
   margin-left: 10px;
+
+  &--modal {
+    margin-left: 0px;
+  }
 }
 
 .cards__btn {
@@ -114,20 +134,26 @@
     background-position: 0 0;
     background-color: transparent;
   }
-}
+}*/
 
 /*стили всплывающего окна для подробного описания продуктовой карточки*/
+.cards__wrap {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: $background-light;
+  border-radius: 15px;
+  box-shadow: 0 3px 10px 10px rgba(0, 0, 0, 0.2);
+}
 .cards__modal {
   width: 280px;
   box-sizing: border-box;
-  box-shadow: 0 3px 10px -.5px rgba(0, 0, 0, .2);
+
   text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 50px;
   background-color: $background-light;
-  transition: 0.3s all;
   overflow: auto;
 }
 
@@ -187,7 +213,7 @@
   .cards__item {
     width: 324px;
     width: 47.09302325581395%;
-    padding-bottom: 30px;
+    padding-bottom: 20px;
     margin-bottom: 40px;
   }
 

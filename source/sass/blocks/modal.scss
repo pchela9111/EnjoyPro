@@ -5,7 +5,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  z-index: 21;
+  z-index: 25;
+
 }
 
 .modal__overlay {
@@ -31,8 +32,6 @@
   position: absolute;
   width: 22px;
   height: 22px;
-  width: 22px;
-  height: 22px;
   top: 10px;
   right: 12px;
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 47.971 47.971'%3E%3Cpath d='M28.228 23.986L47.092 5.122a2.998 2.998 0 000-4.242 2.998 2.998 0 00-4.242 0L23.986 19.744 5.121.88a2.998 2.998 0 00-4.242 0 2.998 2.998 0 000 4.242l18.865 18.864L.879 42.85a2.998 2.998 0 104.242 4.241l18.865-18.864L42.85 47.091c.586.586 1.354.879 2.121.879s1.535-.293 2.121-.879a2.998 2.998 0 000-4.242L28.228 23.986z' fill='%232d3237'/%3E%3C/svg%3E");
@@ -43,6 +42,10 @@
   border: none;
   cursor: pointer;
   transition: 200ms;
+
+  &--cart {
+    top: 5px;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -56,6 +59,6 @@
 @media (min-width: $tablet-width) {
   .modal__toggle {
     top: 15px;
-    right: 15px;
+    right: 25px;
   }
 }

@@ -1,0 +1,138 @@
+.shared {
+  box-sizing: border-box;
+}
+
+.shared__btn {
+  box-sizing: border-box;
+  background-color: transparent;
+  border: none;
+  transition: 280ms;
+  cursor: pointer;
+
+  &--cards {
+    width: 110px;
+    padding: 5px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $text-darkness;
+
+    &:hover,
+    &:focus {
+      color: $accent-stronger;
+    }
+
+    &:active {
+      opacity: 0.3
+    }
+  }
+
+  &--form {
+    width: 110px;
+    font-size: 1.5rem;
+    line-height: 1.2;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: $accent-stronger;
+    margin-right: auto;
+    margin-left: auto;
+
+    &:hover {
+      opacity: 0.6
+    }
+
+    &:active {
+      opacity: 0.3
+    }
+  }
+}
+
+.shared__btn--cards:hover .shared__svg--view {
+  fill: $accent-stronger;
+}
+
+.shared--form:hover .shared__svg--form {
+  opacity: 0.6;
+}
+
+.shared__svg {
+  transition: 280ms;
+
+  &--view {
+    width: 32px;
+    height: 32px;
+    fill: $secondary;
+
+    &:hover,
+    &:focus {
+      fill: $accent-stronger;
+    }
+  }
+
+  &--smile {
+    fill: $accent;
+  }
+
+  &--left {
+    margin-left: 10px;
+  }
+
+  &--small {
+    margin-left: 5px;
+  }
+
+  &--form {
+    fill: $accent-stronger;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+  }
+
+  &:active {
+    opacity: 0.3
+  }
+}
+
+.shared__smile {
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  line-height: 1.2;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: $text-darkness;
+  color: red;
+
+  &--cart {
+    width: 60%;
+    padding-left: 10px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+
+  .shared__smile {
+
+    &--cards {
+      width: 31%;
+      font-size: 1.4rem;
+    }
+
+    &--cart {
+      width: 31%;
+      font-size: 1.4rem;
+    }
+  }
+
+  .shared__svg {
+
+    &--small {
+      margin-left: 0;
+    }
+  }
+}
