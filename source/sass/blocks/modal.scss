@@ -44,7 +44,7 @@
   transition: 200ms;
 
   &--cart {
-    top: 5px;
+    top: 2px;
   }
 
   &:hover {
@@ -60,5 +60,10 @@
   .modal__toggle {
     top: 15px;
     right: 25px;
+
+    &--cart {
+      top: 5px;
+      right: 15px;
+    }
   }
 }

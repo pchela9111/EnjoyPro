@@ -56,7 +56,7 @@
           <button class="nav-main__cart" type="button"></button>
           <ul class="nav-main__list-menu  nav-menu">
             <li class="nav-menu__item"><a class="nav-menu__link" aria-current="page"><span class="visually-hidden">Текущий пункт</span>О компании</a></li>
-            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Каталог</span></a></li>
+            <li class="nav-menu__item"><a class="nav-menu__link" href="#">Каталог</a></li>
             <li class="nav-menu__item"><a class="nav-menu__link" href="#">Доставка и оплата</a></li>
             <li class="nav-menu__item"><a class="nav-menu__link" href="#">Контакты</a></li>
           </ul>
@@ -374,15 +374,15 @@
         <b class="cart__subhead">Мой заказ</b>
         <div class="cart__table">
           <div class="cart__row  cart__row--title">
-            <div class="cart__col">Товар</div>
-            <div class="cart__col">Кол-во</div>
-            <div class="cart__col">Цена</div>
+            <div class="cart__col  cart__col--product">Товар</div>
+            <div class="cart__col  cart__col--quantity">Кол-во</div>
+            <div class="cart__col  cart__col--cost">Цена</div>
           </div>
-          <div class="cart__content">
-            <div class="cart__row">
+          <div class="cart__row">
+            <div class="cart__inner">
               <div class="cart__col  cart__col--img">
                 <div class="cart__img">
-                  <img src="img/handle-lock-product-cart@1x.jpg" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
+                  <img src="img/handle-lock-product-cart@1x.jpg" width="101" height="95" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
                 </div>
                 <p class="cart__price">4 647 <span>р</span></p>
               </div>
@@ -391,27 +391,27 @@
                 <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
                 <p class="cart__text  cart__text--small">код товара: 5726</p>
               </div>
-              <div class="cart__col  cart__col--smile">
-                <p class="shared  shared__smile  shared__smile--cart">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-              </div>
-              <div class="cart__col  cart__col--counter">
-                <span class="cart__counter">
-                  <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
-                  <input class="cart__input" type="text" name="number" value="" placeholder="2">
-                  <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
-                </span>
-              </div>
-              <div class="cart__col  cart__col--price">
-                <p class="cart__price  cart__price--amount">9 294 <span>р</span></p>
-              </div>
-              <div class="cart__col  cart__col--delete">
-                <p class="cart__delete">удалить</p>
-                <button class="cart__toggle" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+              <div class="cart__shared">
+                <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
               </div>
             </div>
+            <div class="cart__col  cart__col--counter">
+              <span class="cart__counter">
+                <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+                <input class="cart__input" type="text" name="number" value="" placeholder="2">
+                <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+              </span>
+            </div>
+            <div class="cart__col  cart__col--price">
+              <p class="cart__price  cart__price--amount">9 294 <span>р</span></p>
+            </div>
+            <div class="cart__col  cart__col--delete">
+              <p class="cart__delete">удалить</p>
+              <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
+            </div>
           </div>
-          <div class="cart__content">
-            <div class="cart__row">
+          <div class="cart__row">
+            <div class="cart__inner">
               <div class="cart__col  cart__col--img">
                 <div class="cart__img">
                   <img src="img/loop-product-cart@1x.jpg" alt="Петля МТН 14028 для распашной двери холодильной камеры">
@@ -423,30 +423,30 @@
                 <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
                 <p class="cart__text  cart__text--small">код товара: 10739</p>
               </div>
-              <div class="cart__col  cart__col--smile">
-                <p class="shared  shared__smile  shared__smile--cart">Наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-              </div>
-              <div class="cart__col  cart__col--counter">
-                <span class="cart__counter">
-                  <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
-                  <input class="cart__input" type="text" name="number" value="" placeholder="1">
-                  <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
-                </span>
-              </div>
-              <div class="cart__col  cart__col--price">
-                <p class="cart__price  cart__price--amount">1 127 <span>р</span></p>
-              </div>
-              <div class="cart__col  cart__col--delete">
-                <p class="cart__delete">удалить</p>
-                <button class="cart__toggle" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+              <div class="cart__shared">
+                <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
               </div>
             </div>
-            <div class="cart__row  cart__row--total">
-              <div class="cart__col  cart__col--total">
-                <p class="cart__total">Итого:</p>
-                <p class="cart__price  cart__price--total">10 421 <span>р</span></p>
-              </div>
+            <div class="cart__col  cart__col--counter">
+              <span class="cart__counter">
+                <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+                <input class="cart__input" type="text" name="number" value="" placeholder="1">
+                <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+              </span>
+            </div>
+            <div class="cart__col  cart__col--price">
+              <p class="cart__price  cart__price--amount">1 127 <span>р</span></p>
+            </div>
+            <div class="cart__col  cart__col--delete">
+              <p class="cart__delete">удалить</p>
+              <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
+            </div>
 
+          </div>
+          <div class="cart__row  cart__row--total">
+            <div class="cart__col  cart__col--total">
+              <p class="cart__total">Итого:</p>
+              <p class="cart__price  cart__price--total">10 421 <span>р</span></p>
             </div>
           </div>
         </div>
@@ -487,20 +487,20 @@
                 <legend class="tabs__legend">Оформить заказ</legend>
                 <ul class="form__list">
                   <li class="form__item">
-                    <label class="form__label" for="name">Имя*</label>
-                    <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+                    <label class="form__label" for="your-name">Имя*</label>
+                    <input class="form__input" type="text" name="name" id="your-name" placeholder="Введите ваше имя" required>
                   </li>
                   <li class="form__item">
-                    <label class="form__label" for="phone">Телефон*</label>
-                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+                    <label class="form__label" for="your-phone">Телефон*</label>
+                    <input class="form__input" type="tel" name="phone" id="your-phone" placeholder="Ведите свой номер телефона" required>
                   </li>
                   <li class="form__item">
-                    <label class="form__label" for="email">Email</label>
-                    <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+                    <label class="form__label" for="your-email">Email</label>
+                    <input class="form__input" type="email" name="email" id="your-email" placeholder="Введите свой email">
                   </li>
                   <li class="form__item">
                     <label class="visually-hidden">Оставьте комментарий
-                      <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                      <textarea class="form__textarea" name="comment" placeholder="Оставьте комментарий"></textarea>
                     </label>
                   </li>
                 </ul>
