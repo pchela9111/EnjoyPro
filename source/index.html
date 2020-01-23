@@ -167,7 +167,7 @@
               <div class="cards__wrap">
                 <div class="cards__modal">
                   <h2 class="visually-hidden">Подробное описание товара</h2>
-                  <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+                  <button class="modal__toggle  modal__toggle--cards  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
                   <h3 class="cards__title">Ручка-замок для распашной двери холодильной камеры MTH <br />(13022, 13023, 15040)</h3>
                   <div class="cards__inner">
                     <div class="cards__img  cards__img--modal">
@@ -202,8 +202,8 @@
                   <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
                   <button class="button  button--arrow-right  button--base  button--call  modal--open-js" type="button"  data-modal="2">Заказать звонок</button>
                   <div class="tabs">
-                    <div class="tabs__nav">
-                      <button class="tabs__btn  is-active" type="button" data-tab-name="tab-1">Описание</button>
+                    <div class="tabs__nav  tabs__nav--cards">
+                      <button class="tabs__btn is-active" type="button" data-tab-name="tab-1">Описание</button>
                       <div class="tabs__btn" data-tab-name="tab-2">Доставка</div>
                     </div>
                     <div class="tabs__desc">
@@ -279,7 +279,7 @@
               <button class="button  button--arrow-right  button--accent-strong  button--cart" type="button">Добавить в корзину</button>
               <button class="button  button--arrow-right  button--base  button--call" type="button">Заказать звонок</button>
               <div class="tabs">
-                <div class="tabs__nav">
+                <div class="tabs__nav  tabs__nav--cards">
                   <div class="tabs__btn  is-active" data-tab-name="tab-1">Описание</div>
                   <div class="tabs__btn" data-tab-name="tab-2">Доставка</div>
                 </div>
@@ -341,19 +341,20 @@
   <!-- Форма для заказа звонка -->
   <div class="modal"  data-modal="2">
     <form class="form" action="#" method="post">
-      <button class="modal__toggle  modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
-      <ul class="form__list">
+      <h2 class="visually-hidden">Форма заказа звонка</h2>
+      <button class="modal__toggle  modal__toggle--call modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+      <ul class="form__list  form__list--call">
         <li class="form__item">
-          <label class="form__label" for="name">Имя*</label>
-          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+          <label class="form__label" for="name-call">Имя*</label>
+          <input class="form__input" type="text" name="name" id="name-call" placeholder="Иван Петров" required>
         </li>
         <li class="form__item">
-          <label class="form__label" for="phone">Телефон*</label>
-          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+          <label class="form__label" for="phone-call">Телефон*</label>
+          <input class="form__input" type="tel" name="phone" id="phone-call" placeholder="Ваш телефон" required>
         </li>
         <li class="form__item">
-          <label class="form__label" for="email">Email</label>
-          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+          <label class="form__label" for="email-call">Email</label>
+          <input class="form__input" type="email" name="email" id="email-call" placeholder="Ваш email">
         </li>
       </ul>
       <button class="button  button--base  button--form" type="submit">Заказать звонок</button>
@@ -367,268 +368,224 @@
 
   <!-- корзина -->
   <!--<div class="modal  data-modal="4">-->
-    <section class="cart">
-      <div class="cart__wrap">
-        <button class="modal__toggle  modal__toggle--cart modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
-        <h2 class="cart__title">Моя корзина</h2>
-        <b class="cart__subhead">Мой заказ</b>
-        <div class="cart__table">
-          <div class="cart__row  cart__row--title">
-            <div class="cart__col  cart__col--product">Товар</div>
-            <div class="cart__col  cart__col--quantity">Кол-во</div>
-            <div class="cart__col  cart__col--cost">Цена</div>
-          </div>
-          <div class="cart__row">
-            <div class="cart__inner">
-              <div class="cart__col  cart__col--img">
-                <div class="cart__img">
-                  <img src="img/handle-lock-product-cart@1x.jpg" width="101" height="95" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
-                </div>
-                <p class="cart__price">4 647 <span>р</span></p>
+  <section class="cart">
+    <div class="cart__wrap">
+      <button class="modal__toggle  modal__toggle--cart modal--close-js" type="button" aria-label="Открыть-Закрыть модальное окно"></button>
+      <h2 class="cart__title">Моя корзина</h2>
+      <b class="cart__subhead">Мой заказ</b>
+      <div class="cart__table">
+        <div class="cart__row  cart__row--title">
+          <div class="cart__col  cart__col--product">Товар</div>
+          <div class="cart__col  cart__col--quantity">Кол-во</div>
+          <div class="cart__col  cart__col--cost">Цена</div>
+        </div>
+        <div class="cart__row">
+          <div class="cart__inner">
+            <div class="cart__col  cart__col--img">
+              <div class="cart__img">
+                <img src="img/handle-lock-product-cart@1x.jpg" width="101" height="95" alt="Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)">
               </div>
-              <div class="cart__col  cart__col--name">
-                <p class="cart__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
-                <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
-                <p class="cart__text  cart__text--small">код товара: 5726</p>
-              </div>
-              <div class="cart__shared">
-                <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-              </div>
+              <p class="cart__price">4 647 <span>р</span></p>
             </div>
-            <div class="cart__col  cart__col--counter">
-              <span class="cart__counter">
-                <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
-                <input class="cart__input" type="text" name="number" value="" placeholder="2">
-                <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
-              </span>
+            <div class="cart__col  cart__col--name">
+              <p class="cart__name">Ручка-замок для распашной двери холодильной камеры MTH (13022, 13023, 15040)</p>
+              <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
+              <p class="cart__text  cart__text--small">код товара: 5726</p>
             </div>
-            <div class="cart__col  cart__col--price">
-              <p class="cart__price  cart__price--amount">9 294 <span>р</span></p>
-            </div>
-            <div class="cart__col  cart__col--delete">
-              <p class="cart__delete">удалить</p>
-              <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
+            <div class="cart__shared">
+              <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
           </div>
-          <div class="cart__row">
-            <div class="cart__inner">
-              <div class="cart__col  cart__col--img">
-                <div class="cart__img">
-                  <img src="img/loop-product-cart@1x.jpg" alt="Петля МТН 14028 для распашной двери холодильной камеры">
-                </div>
-                <p class="cart__price">1 127 <span>р</span></p>
-              </div>
-              <div class="cart__col  cart__col--name">
-                <p class="cart__name">Петля МТН 14028 для распашной двери холодильной камеры</p>
-                <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
-                <p class="cart__text  cart__text--small">код товара: 10739</p>
-              </div>
-              <div class="cart__shared">
-                <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
-              </div>
-            </div>
-            <div class="cart__col  cart__col--counter">
-              <span class="cart__counter">
-                <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
-                <input class="cart__input" type="text" name="number" value="" placeholder="1">
-                <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
-              </span>
-            </div>
-            <div class="cart__col  cart__col--price">
-              <p class="cart__price  cart__price--amount">1 127 <span>р</span></p>
-            </div>
-            <div class="cart__col  cart__col--delete">
-              <p class="cart__delete">удалить</p>
-              <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
-            </div>
-
+          <div class="cart__col  cart__col--counter">
+            <span class="cart__counter">
+              <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+              <input class="cart__input" type="text" name="number" value="" placeholder="2">
+              <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+            </span>
           </div>
-          <div class="cart__row  cart__row--total">
-            <div class="cart__col  cart__col--total">
-              <p class="cart__total">Итого:</p>
-              <p class="cart__price  cart__price--total">10 421 <span>р</span></p>
-            </div>
+          <div class="cart__col  cart__col--price">
+            <p class="cart__price  cart__price--amount">9 294 <span>р</span></p>
+          </div>
+          <div class="cart__col  cart__col--delete">
+            <p class="cart__delete">удалить</p>
+            <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
           </div>
         </div>
-        <a class="cart__link" href="#catalog">Вернуться в каталог</a>
-      <form class="cart__delivery" action="#" method="post">
-        <fieldset class="cart__fieldset">
-          <legend class="cart__legend">Выбрать способ доставки:</legend>
-          <ul class="tabs__nav">
-            <li class="tabs__btn">
-              <label class="tabs__btn" for="btn-1">Самовывоз</label>
-              <input class="tabs__input" type="radio" id="btn-1" name="pickup" checked>
-            </li>
-            <li class="tabs__btn">
-              <label class="tabs__btn" for="btn-2">Доставка по Москве и МО</label>
-              <input class="tabs__input" type="radio" id="btn-2" name="delivery_in_moscow_and_mo">
-            </li>
-            <li class="tabs__btn">
-              <label class="tabs__btn" for="btn-3">Доставка транспортной компанией по РФ</label>
-              <input class="tabs__input" type="radio" id="btn-3" name="delivery_transport_company">
-            </li>
-          </ul>
-          <div class="tabs__desc">
-            <div class="tabs__content" id="tab-1">
-              <fieldset class="tabs__fieldset">
-                <legend class="tabs__legend">Пункты самовывоза:</legend>
-                <ul class="tabs__options">
-                  <li class="tabs__option">
-                    <label class="tabs__btn" for="metro-1">м. Красногвардейская</label>
-                    <input class="tabs__input" type="radio" id="metro-1" name="krasnogvardeyskaya" checked>
-                  </li>
-                  <li class="tabs__option">
-                    <label class="tabs__btn" for="metro-2">м. Планерная</label>
-                    <input class="tabs__input" type="radio" id="metro-2" name="planernaya">
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="tabs__fieldset">
-                <legend class="tabs__legend">Оформить заказ</legend>
-                <ul class="form__list">
-                  <li class="form__item">
-                    <label class="form__label" for="your-name">Имя*</label>
-                    <input class="form__input" type="text" name="name" id="your-name" placeholder="Введите ваше имя" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="your-phone">Телефон*</label>
-                    <input class="form__input" type="tel" name="phone" id="your-phone" placeholder="Ведите свой номер телефона" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="your-email">Email</label>
-                    <input class="form__input" type="email" name="email" id="your-email" placeholder="Введите свой email">
-                  </li>
-                  <li class="form__item">
-                    <label class="visually-hidden">Оставьте комментарий
-                      <textarea class="form__textarea" name="comment" placeholder="Оставьте комментарий"></textarea>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
+        <div class="cart__row">
+          <div class="cart__inner">
+            <div class="cart__col  cart__col--img">
+              <div class="cart__img">
+                <img src="img/loop-product-cart@1x.jpg" alt="Петля МТН 14028 для распашной двери холодильной камеры">
+              </div>
+              <p class="cart__price">1 127 <span>р</span></p>
             </div>
-            <div class="tabs__content" id="tab-2">
-              <fieldset class="tabs__fieldset">
-                <legend class="visually-hidden">Доставка по Москве и МО</legend>
-                <ul class="tabs__nav">
-                  <li class="tabs__btn">
-                    <label class="tabs__btn" for="btn-4">Доставка по Москве в пределах МКАД</label>
-                    <input class="tabs__input" type="radio" id="btn-4" name="delivery_in_moscow_in_mkad" checked>
-                  </li>
-                  <li class="tabs__btn">
-                    <label class="tabs__btn" for="btn-5">Доставка по Москве за МКАД и по Московской области</label>
-                    <input class="tabs__input" type="radio" id="btn-5" name="delivery_moscow_region">
-                  </li>
-                </ul>
-                <div class="tabs__desc">
-                  <div class="tabs__content" id="tab-4">
-                    <p class="tabs__text">Стоимость доставки  по Москве в пределах МКАД — 500 рублей.</p>
-                    <fieldset class="tabs__fieldset">
-                      <legend class="tabs__legend">Оформить заказ</legend>
-                      <ul class="form__list">
-                        <li class="form__item">
-                          <label class="form__label" for="name">Имя*</label>
-                          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="phone">Телефон*</label>
-                          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="email">Email</label>
-                          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="address">Адрес*</label>
-                          <input class="form__input" type="text" name="address" id="address" placeholder="ул Поперника 8" required>
-                        </li>
-                        <li class="form__item">
-                          <label class="visually-hidden">Оставьте комментарий
-                            <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
-                          </label>
-                        </li>
-                      </ul>
-                    </fieldset>
-                  </div>
-                  <div class="tabs__content" id="tab-5">
-                    <p class="tabs__text">Стоимость доставки  по Москве за пределами МКАД и по Московской области — 500 рублей + 30 рублей за 1 км.</p>
-                    <fieldset class="tabs__fieldset">
-                      <legend class="tabs__legend">Оформить заказ</legend>
-                      <ul class="form__list">
-                        <li class="form__item">
-                          <label class="form__label" for="name">Имя*</label>
-                          <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="phone">Телефон*</label>
-                          <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="email">Email</label>
-                          <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
-                        </li>
-                        <li class="form__item">
-                          <label class="form__label" for="address">Адрес*</label>
-                          <textarea class="form__input" type="email" name="comment" placeholder="Ногинский р-н п Обухово ул Луговая 6" required></textarea>
-                        </li>
-                        <li class="form__item">
-                          <label class="visually-hidden">Оставьте комментарий
-                            <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
-                          </label>
-                        </li>
-                      </ul>
-                    </fieldset>
-                  </div>
-                </div>
-              </fieldset>
+            <div class="cart__col  cart__col--name">
+              <p class="cart__name">Петля МТН 14028 для распашной двери холодильной камеры</p>
+              <p class="cart__text  cart__text--country">Страна производитель: Италия</p>
+              <p class="cart__text  cart__text--small">код товара: 10739</p>
             </div>
-            <div class="tabs__content" id="tab-3">
-              <h2 class="visually-hidden">Доставка транспортной компанией по РФ</h2>
-              <fieldset class="tabs__fieldset">
-                <legend class="tabs__legend">Оформить заказ</legend>
-                <ul class="form__list">
-                  <li class="form__item">
-                    <label class="form__label" for="name">Имя*</label>
-                    <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="phone">Телефон*</label>
-                    <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="email">Email</label>
-                    <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email" required>
-                  </li>
-                  <li class="form__item">
-                    <label class="form__label" for="destination">Пункт назначения*</label>
-                    <textarea class="form__input" type="destination" name="destination" placeholder="Краснодарский край г Анапа" required></textarea>
-                  </li>
-                  <li class="form__item">
-                    <label class="visually-hidden">Оставьте комментарий
-                      <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
-                    </label>
-                  </li>
-                </ul>
-              </fieldset>
-              <fieldset class="tabs__fieldset">
-                <legend class="tabs__legend">Нужна доставка по городу?</legend>
-                <ul class="tabs__options">
-                  <li class="tabs__option">
-                    <label class="tabs__btn" for="yes">Да</label>
-                    <input class="tabs__input" type="radio" id="yes" name="yes" checked>
-                  </li>
-                  <li class="tabs__option">
-                    <label class="tabs__btn" for="no">Нет. Заберу с терминала транспортной компании</label>
-                    <input class="tabs__input" type="radio" id="no" name="no_transport_company_terminal">
-                  </li>
-                </ul>
-              </fieldset>
+            <div class="cart__shared">
+              <p class="shared  shared__smile  shared__smile--cart">наличие в Москве <svg class="shared__svg  shared__svg--smile  shared__svg--left" width="25" height="25"><use xlink:href="#icon-smile"></use></svg></p>
             </div>
           </div>
-        </fieldset>
-      </form>
+          <div class="cart__col  cart__col--counter">
+            <span class="cart__counter">
+              <button class="cart__btn  cart__btn--minus" type="button" aria-label="уменьшить количество товара"></button>
+              <input class="cart__input" type="text" name="number" value="" placeholder="1">
+              <button class="cart__btn  cart__btn--plus" type="button" aria-label="увеличить количество товара"></button>
+            </span>
+          </div>
+          <div class="cart__col  cart__col--price">
+            <p class="cart__price  cart__price--amount">1 127 <span>р</span></p>
+          </div>
+          <div class="cart__col  cart__col--delete">
+            <p class="cart__delete">удалить</p>
+            <button class="cart__toggle" type="button" aria-label="Удалить товар из корзины"></button>
+          </div>
+        </div>
+        <div class="cart__row  cart__row--total">
+          <div class="cart__col  cart__col--total">
+            <p class="cart__total">Итого:</p>
+            <p class="cart__price  cart__price--total">10 421 <span>р</span></p>
+          </div>
+        </div>
       </div>
-    </section>
-<!--  </div>-->
+      <a class="cart__link" href="#catalog">Вернуться в каталог</a>
+    </div>
+    <!-- Доставка -->
+    <form class="cart__delivery" action="#" method="post">
+      <fieldset class="cart__fieldset">
+        <legend class="cart__legend">Выбрать способ доставки:</legend>
+        <!--Переключатель для табов-->
+        <input class="tabs__input" type="radio" id="slide-1" name="delivery" value="pickup" checked>
+        <input class="tabs__input" type="radio" id="slide-2" name="delivery" value="delivery_in_moscow_and_mo">
+        <input class="tabs__input" type="radio" id="slide-3" name="delivery" value="delivery_transport_company">
+
+        <div class="tabs__nav  tabs__nav--cart  tabs__controls  tabs__controls--pickup">
+          <label class="tabs__label  tabs__label--delivery" for="slide-1">Самовывоз</label>
+          <label class="tabs__label  tabs__label--delivery" for="slide-2">Доставка по Москве и МО</label>
+          <label class="tabs__label  tabs__label--delivery" for="slide-3">Доставка транспортной компанией по РФ</label>
+        </div>
+        <div class="tabs__slides">
+          <div class="tabs__box  tabs__box--pickup">
+            <fieldset class="tabs__fieldset">
+              <legend class="tabs__legend">Пункты самовывоза:</legend>
+
+              <input class="tabs__input" type="radio" id="btn-1" name="metro" value="krasnogvardeyskaya" checked>
+              <input class="tabs__input" type="radio" id="btn-2" name="metro" value="planernaya">
+
+              <div class="tabs__nav  tabs__nav--cart  tabs__controls">
+                <label class="tabs__label  tabs__label--metro" for="btn-1">м. Красногвардейская</label>
+                <label class="tabs__label  tabs__label--metro" for="btn-2">м. Планерная</label>
+              </div>
+            </fieldset>
+            <fieldset class="tabs__fieldset  tabs__fieldset--order">
+              <legend class="tabs__legend">Оформить заказ</legend>
+              <ul class="form__list  form__list--order">
+                <li class="form__item">
+                  <label class="form__label" for="name-pickup">Имя*</label>
+                  <input class="form__input" type="text" name="name" id="name-pickup" placeholder="Иван Петров" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="phone-pickup">Телефон*</label>
+                  <input class="form__input" type="tel" name="phone" id="phone-pickup" placeholder="Ваш телефон" required>
+                </li>
+                <li class="form__item">
+                  <label class="form__label" for="email-pickup">Email</label>
+                  <input class="form__input" type="email" name="email" id="email-pickup" placeholder="Ваш email">
+                </li>
+                <li class="form__item">
+                  <label class="visually-hidden" for="comment-pickup">Оставьте комментарий</label>
+                  <textarea class="form__textarea" name="comment" id="comment-pickup" placeholder="Оставьте комментарий"></textarea>
+
+                </li>
+              </ul>
+            </fieldset>
+          </div>
+          <div class="tabs__box  tabs__box--moscow">
+           <fieldset class="tabs__fieldset">
+             <legend class="visually-hidden">Доставка по Москве и МО</legend>
+             <ul class="tabs__nav">
+               <li class="tabs__btn">
+                 <label class="tabs__btn" for="btn-4">Доставка по Москве в пределах МКАД</label>
+                 <input class="tabs__input" type="radio" id="btn-1" name="delivery_in_moscow_in_mkad" checked>
+               </li>
+               <li class="tabs__btn">
+                 <label class="tabs__btn" for="btn-5">Доставка по Москве за МКАД и по Московской области</label>
+                 <input class="tabs__input" type="radio" id="btn-2" name="delivery_moscow_region">
+               </li>
+             </ul>
+           </fieldset>
+           <p class="tabs__text">Стоимость доставки  по Москве в пределах МКАД — 500 рублей.</p>
+           <fieldset class="tabs__fieldset">
+             <legend class="tabs__legend">Оформить заказ</legend>
+             <ul class="form__list">
+               <li class="form__item">
+                 <label class="form__label" for="name">Имя*</label>
+                 <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="phone">Телефон*</label>
+                 <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="email">Email</label>
+                 <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="address">Адрес*</label>
+                 <input class="form__input" type="text" name="address" id="address" placeholder="ул Поперника 8" required>
+               </li>
+               <li class="form__item">
+                 <label class="visually-hidden">Оставьте комментарий
+                   <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                 </label>
+               </li>
+             </ul>
+           </fieldset>
+         </div>
+         <div class="tabs__box  tabs__box--transport">
+           <fieldset class="tabs__fieldset">
+             <legend class="tabs__legend">Оформить заказ</legend>
+             <ul class="form__list  ">
+               <li class="form__item">
+                 <label class="form__label" for="name">Имя*</label>
+                 <input class="form__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="phone">Телефон*</label>
+                 <input class="form__input" type="tel" name="phone" id="phone" placeholder="Ведите свой номер телефона" required>
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="email">Email</label>
+                 <input class="form__input" type="email" name="email" id="email" placeholder="Введите свой email">
+               </li>
+               <li class="form__item">
+                 <label class="form__label" for="address">Адрес*</label>
+                 <textarea class="form__input" type="email" name="comment" placeholder="Ногинский р-н п Обухово ул Луговая 6" required></textarea>
+               </li>
+               <li class="form__item">
+                 <label class="visually-hidden">Оставьте комментарий
+                   <textarea class="form__textarea" type="email" name="comment" placeholder="Оставьте комментарий"></textarea>
+                 </label>
+               </li>
+             </ul>
+           </fieldset>
+           <fieldset class="tabs__fieldset">
+
+           </fieldset>
+         </div>
+       </div>
+
+
+      </fieldset>
+
+    </form>
+  </section>
+
+
+
+  <!--  </div>-->
 
   <!-- Подложка под модальным окном -->
   <div class="modal__overlay  modal--overlay-js"></div>

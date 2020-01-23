@@ -13,15 +13,28 @@
 }
 
 .form__list {
-  width: 100%;
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   list-style: none;
-  padding: 20px;
+
+  &--call {
+    width: 100%;
+    padding: 20px;
+  }
+
+  &--order {
+    width: 92.85714285714286%;
+    width: 260px;
+    padding: 20px 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: $background-light;
+  }
 }
 
 .form__item {
-  margin-bottom: 20px;
+  margin-bottom: 25px;
 }
 
 .form__label {
@@ -30,26 +43,51 @@
   font-size: 1.6rem;
   line-height: 1.2;
   color: $text-darkness;
+  margin-bottom: 5px;
 }
 
 .form__input {
-  width: 240px;
+  width: 100%;
   display: block;
   box-sizing: border-box;
-  padding: 10px 14px 7px;
+  padding: 10px 14px 7px 8px;
   font-size: 1.6rem;
   line-height: 1.2;
-
   border: none;
   border-bottom: 1px solid $secondary-darkness;
+    border-bottom: 1px solid red;
   background-color: transparent;
   transition: all 80ms;
+
   &::placeholder {
     color: rgba(84, 73, 81, 0.5);
   }
 
   &:hover {
-    border-bottom: 1px solid $accent;
+    background-color: $primary-light;
+  }
+  &:focus {
+    &::placeholder {
+      color: rgba(84, 73, 81, 0.9);
+    }
+  }
+}
+
+.form__textarea {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 10px 14px 7px 8px;
+  font-size: 1.6rem;
+  line-height: 1.2;
+  background-color: transparent;
+  border: 1px solid $secondary-darkness;
+
+  &::placeholder {
+    color: rgba(84, 73, 81, 0.5);
+  }
+
+  &:hover {
+    background-color: $primary-light;
   }
   &:focus {
     &::placeholder {
