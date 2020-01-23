@@ -29,6 +29,7 @@
   font-weight: 700;
   color: $text-dark;
   text-transform: uppercase;
+  text-align: center;
   margin-right: auto;
   margin-left: auto;
   margin-bottom: 20px;
@@ -38,6 +39,7 @@
   font-size: 2.1rem;
   line-height: 1.2;
   font-weight: 700;
+  text-align: center;
   color: $text-dark;
   margin-right: auto;
   margin-left: auto;
@@ -61,7 +63,8 @@
 .cart__inner {
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 10px;
+  padding-bottom: 7px;
+  margin-bottom: 3px;
   background-color: $primary-light;
 }
 
@@ -108,7 +111,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10px 5px 10px 5px;
+    padding: 15px 5px 12px 5px;
   }
 }
 
@@ -285,6 +288,7 @@
   line-height: 1.2;
   text-transform: uppercase;
   color: $text-darkness;
+  color: red;
 }
 
 .cart__link {
@@ -336,12 +340,13 @@
 .cart__delivery {
   padding: 0;
   margin: 0;
-
+  margin-top: 5px;
 }
 
 .cart__fieldset {
   padding: 0;
   margin: 0;
+  border: none;
 }
 
 .cart__legend {
@@ -349,7 +354,6 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  border: none;
   font-size: 2.1rem;
   line-height: 1.2;
   font-weight: 500;
@@ -357,6 +361,7 @@
   color: red;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 30px;
 }
 
 
