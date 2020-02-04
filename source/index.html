@@ -461,9 +461,9 @@
         <input class="tabs__input" type="radio" id="slide-2" name="delivery" value="delivery_in_moscow_and_mo">
         <input class="tabs__input" type="radio" id="slide-3" name="delivery" value="delivery_transport_company">
 
-        <div class="tabs__nav  tabs__nav--cart  tabs__controls  tabs__controls--pickup">
+        <div class="tabs__nav  tabs__nav--cart  tabs__controls">
           <label class="tabs__label  tabs__label--delivery" for="slide-1">Самовывоз</label>
-          <label class="tabs__label  tabs__label--delivery" for="slide-2">Доставка по Москве и МО</label>
+          <label class="tabs__label  tabs__label--delivery" for="slide-2">Доставка по Москве и&nbsp;МО</label>
           <label class="tabs__label  tabs__label--delivery" for="slide-3">Доставка транспортной компанией по РФ</label>
         </div>
         <div class="tabs__slides">
@@ -474,9 +474,9 @@
               <input class="tabs__input" type="radio" id="btn-1" name="metro" value="krasnogvardeyskaya" checked>
               <input class="tabs__input" type="radio" id="btn-2" name="metro" value="planernaya">
 
-              <div class="tabs__nav  tabs__nav--cart  tabs__controls">
-                <label class="tabs__label  tabs__label--metro" for="btn-1">м. Красногвардейская</label>
-                <label class="tabs__label  tabs__label--metro" for="btn-2">м. Планерная</label>
+              <div class="tabs__switching">
+                <label class="tabs__label  tabs__label--toggle" for="btn-1">м. Красногвардейская</label>
+                <label class="tabs__label  tabs__label--toggle" for="btn-2">м. Планерная</label>
               </div>
             </fieldset>
             <fieldset class="tabs__fieldset  tabs__fieldset--order">
@@ -497,26 +497,15 @@
                 <li class="form__item">
                   <label class="visually-hidden" for="comment-pickup">Оставьте комментарий</label>
                   <textarea class="form__textarea" name="comment" id="comment-pickup" placeholder="Оставьте комментарий"></textarea>
-
                 </li>
               </ul>
             </fieldset>
           </div>
           <div class="tabs__box  tabs__box--moscow">
            <fieldset class="tabs__fieldset">
-             <legend class="visually-hidden">Доставка по Москве и МО</legend>
-             <ul class="tabs__nav">
-               <li class="tabs__btn">
-                 <label class="tabs__btn" for="btn-4">Доставка по Москве в пределах МКАД</label>
-                 <input class="tabs__input" type="radio" id="btn-1" name="delivery_in_moscow_in_mkad" checked>
-               </li>
-               <li class="tabs__btn">
-                 <label class="tabs__btn" for="btn-5">Доставка по Москве за МКАД и по Московской области</label>
-                 <input class="tabs__input" type="radio" id="btn-2" name="delivery_moscow_region">
-               </li>
-             </ul>
+              <legend class="tabs__legend">Доставка по Москве и МО</legend>
            </fieldset>
-           <p class="tabs__text">Стоимость доставки  по Москве в пределах МКАД — 500 рублей.</p>
+
            <fieldset class="tabs__fieldset">
              <legend class="tabs__legend">Оформить заказ</legend>
              <ul class="form__list">

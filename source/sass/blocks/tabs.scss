@@ -3,7 +3,6 @@
 }
 
 .tabs__nav {
-
   &--cards {
     display: flex;
     justify-content: space-between;
@@ -82,6 +81,7 @@
 .tabs__inner {
   height: 100%;
 }
+
 .tabs__text {
   width: 100%;
   font-size: 1.6rem;
@@ -124,46 +124,42 @@
 }
 
 .tabs__controls {
+  margin-bottom: 20px;
+}
 
-  &--pickup {
-    margin-bottom: 15px;
+.tabs__label {
+  position: relative;
+  font-size: 1.8rem;
+  line-height: 1.2;
+  color: $text-dark;
+  padding-left: 50px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border: 1px solid $secondary;
+    border-radius: 50%;
+    background-color: $primary-light;
+    top: 17px;
+    left: 15px;
   }
-  .tabs__label {
-    position: relative;
-    font-size: 1.8rem;
-    line-height: 1.2;
-    color: $text-dark;
+
+  &--delivery {
+    padding-top: 17px;
+    padding-right: 20px;
+    padding-bottom: 15px;
     padding-left: 50px;
-    color: red;
-
-
-    &::before {
-      position: absolute;
-      content: "";
-      box-sizing: border-box;
-      width: 20px;
-      height: 20px;
-      border: 1px solid $secondary;
-      border-radius: 50%;
-      background-color: $primary-light;
-      top: 17px;
-      left: 15px;
-    }
-
-    &--delivery {
-      padding-top: 17px;
-      padding-bottom: 15px;
-      padding-left: 50px;
-      border: 2px solid $primary-lightest;
-      margin-bottom: 8px;
-    }
-
-    &--metro {
-      padding-top: 15px;
-      margin-bottom: 10px;
-    }
+    border: 2px solid $primary-lightest;
+    margin-bottom: 8px;
   }
 
+  &--toggle {
+    padding-top: 15px;
+    margin-bottom: 10px;
+  }
 }
 
 #slide-1:checked ~.tabs__controls label[for="slide-1"],
@@ -172,7 +168,6 @@
 
   background-color:  $primary-light;
   border: 2px solid $secondary;
-  border: 2px solid green;
   border-radius: 10px 10px 0 0;
 }
 
@@ -184,15 +179,12 @@
   background-color: $accent;
 }
 
-
 .tabs__slides {
   position: relative;
   display: flex;
   width: 100%;
   background-color: $primary-light;
-
   z-index: 1;
-  outline: 2px solid red;
 }
 
 .tabs__box {
@@ -201,12 +193,10 @@
 	width: inherit;
 	z-index: 0;
   background-color: $primary-light;
-  box-shadow: 0 3px 10px 10px rgba(0, 0, 0, 0.1);
 
   &--pickup {
-    padding-top: 30px;
+    padding-top: 25px;
   }
-
 }
 
 #slide-1:checked ~ .tabs__slides > .tabs__box--pickup,
@@ -223,7 +213,6 @@
 
   &--order {
     margin-top: 30px;
-    outline: 2px solid red;
   }
 }
 
@@ -237,22 +226,28 @@
   line-height: 1.2;
   font-weight: 500;
   color: $text-darkness;
-  color: red;
   text-transform: uppercase;
   margin-bottom: 20px;
+}
+
+.tabs__switching {
+  display: flex;
+  flex-direction: column;
 }
 
 @media (min-width: $tablet-width) {
 
   .tabs__nav {
-
-
     &--cards {
       margin-right: 40px;
       margin-left: 40px;
     }
-  }
 
+    &--cart {
+      flex-direction: row;
+      flex-wrap: nowrap;
+    }
+  }
 
   .tabs__btn {
     padding-top: 15px;
@@ -270,5 +265,54 @@
 
   .tabs__text {
     font-size: 1.8rem;
+  }
+
+  .tabs__controls {
+    margin-bottom: 5px;
+  }
+
+  .tabs__box {
+  	opacity: 0;
+  	position: absolute;
+  	width: inherit;
+  	z-index: 0;
+    background-color: $primary-light;
+
+    &--pickup {
+      padding-top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .tabs__switching {
+    width: 280px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .tabs__label {
+    &::before {
+
+      width: 15px;
+      height: 15px;
+
+      top: 12px;
+      left: 10px;
+    }
+
+    &--delivery {
+      padding-top: 10px;
+      padding-right: 35px;
+      padding-bottom: 10px;
+      padding-left: 35px;
+      border-top: 2px solid $primary-light;
+      border-right: 2px solid $primary-light;
+      border-bottom: 2px solid $secondary;
+      border-left: 2px solid $primary-light;
+      border-radius: 10px 10px 0 0;
+      margin-bottom: 0;
+    }
   }
 }
